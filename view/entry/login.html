@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="email=no" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<!--<meta name="data-spider" content="user_login" />-->
+		<title>登录/注册</title>
+		<link rel="stylesheet" type="text/css" href="../../static/font-awesome-4.7.0/css/font-awesome.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/public.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/login.css" />
+	</head>
+
+	<body>
+		<div class="tabs">
+			<ul>
+				<li><span class="active">账号密码登录</span></li>
+				<li><span>手机号快捷登录</span></li>
+			</ul>
+		</div>
+
+		<div class="inputCheck direct">
+			<ul>
+				<li>
+					<span class="label zoneNum">+8611</span>
+					<span class="country">中国</span>
+				</li>
+				<li>
+					<span class="label phoneNum">手机号</span>
+					<input type="tel" name="" id="phoneNum" value="" autocomplete="off" placeholder="填写手机号码" maxlength="11" />
+					<i class="fa fa-times-circle phoneNum" aria-hidden="true"></i>
+				</li>
+				<li>
+					<span class="label password">密码</span>
+					<input type="password" name="" id="password" value="" autocomplete="off" placeholder="6-16位登录密码" maxlength="16" />
+					<i class="fa fa-times-circle password" aria-hidden="true"></i>
+				</li>
+			</ul>
+			<div class="button loginButton">
+				<button>登录</button>
+			</div>
+
+			<p class="assist forgetPass">
+				<a href="#">忘记密码</a>
+			</p>
+		</div>
+
+		<div class="inputCheck shortcut">
+			<ul>
+				<li>
+					<span class="label zoneNum">+8611</span>
+					<span class="country">中国</span>
+				</li>
+				<li>
+					<span class="label phoneShortcut">手机号</span>
+					<input type="tel" name="" id="phoneShortcut" value="" autocomplete="off" placeholder="填写手机号码" maxlength="11" />
+					<div class="getVerify"><a>获取验证码</a></div>
+				</li>
+				<li>
+					<span class="label verify">验证码</span>
+					<input type="text" name="" id="verify" value="" autocomplete="off" placeholder="请输入6位验证码" maxlength="6" />
+				</li>
+			</ul>
+
+			<div class="protocol"><label></label>已阅读并同意
+				<a href="">《微店买家服务协议》</a>
+			</div>
+
+			<div class="button loginButtonShortcut">
+				<button>登录</button>
+			</div>
+
+			<p class="assist receiveNothing">
+				<a href="#">收不到验证码？</a>
+			</p>
+		</div>
+
+	</body>
+	<script src="../../js/common/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/common/effect.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/login.js" type="text/javascript" charset="utf-8"></script>
+
+</html>
