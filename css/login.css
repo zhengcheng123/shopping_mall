@@ -65,6 +65,10 @@ div.inputCheck ul li i {
 	color: #DDDDDD
 }
 
+div.inputCheck ul li i.phoneShortcut {
+	right: 115px;
+}
+
 div.inputCheck ul li span {
 	float: left;
 	display: block;

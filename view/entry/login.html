@@ -11,7 +11,7 @@
 		<meta name="apple-touch-fullscreen" content="yes" />
 		<!--<meta name="data-spider" content="user_login" />-->
 		<title>登录/注册</title>
-		<link rel="stylesheet" type="text/css" href="../../static/font-awesome-4.7.0/css/font-awesome.css" />
+		<link rel="stylesheet" type="text/css" href="../../static/font-awesome-4.7.0/css/font-awesome.min.css" />
 		<link rel="stylesheet" type="text/css" href="../../css/public.css" />
 		<link rel="stylesheet" type="text/css" href="../../css/login.css" />
 	</head>
@@ -27,7 +27,7 @@
 		<div class="inputCheck direct">
 			<ul>
 				<li>
-					<span class="label zoneNum">+8611</span>
+					<span class="label zoneNum">+86</span>
 					<span class="country">中国</span>
 				</li>
 				<li>
@@ -53,22 +53,24 @@
 		<div class="inputCheck shortcut">
 			<ul>
 				<li>
-					<span class="label zoneNum">+8611</span>
+					<span class="label zoneNum">+86</span>
 					<span class="country">中国</span>
 				</li>
 				<li>
 					<span class="label phoneShortcut">手机号</span>
 					<input type="tel" name="" id="phoneShortcut" value="" autocomplete="off" placeholder="填写手机号码" maxlength="11" />
 					<div class="getVerify"><a>获取验证码</a></div>
+					<i class="fa fa-times-circle phoneShortcut" aria-hidden="true"></i>
 				</li>
 				<li>
 					<span class="label verify">验证码</span>
 					<input type="text" name="" id="verify" value="" autocomplete="off" placeholder="请输入6位验证码" maxlength="6" />
+					<i class="fa fa-times-circle verify" aria-hidden="true"></i>
 				</li>
 			</ul>
 
 			<div class="protocol"><label></label>已阅读并同意
-				<a href="">《微店买家服务协议》</a>
+				<a href="">《点盈商城买家服务协议》</a>
 			</div>
 
 			<div class="button loginButtonShortcut">
@@ -79,10 +81,10 @@
 				<a href="#">收不到验证码？</a>
 			</p>
 		</div>
-
-	</body>
+	
 	<script src="../../js/common/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../../js/common/effect.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../../js/login.js" type="text/javascript" charset="utf-8"></script>
-
+	<script src="../../js/entry/login.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+	
 </html>

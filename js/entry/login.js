@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	tabs() //tab切换
-	clearInput() //输入框清楚按钮
+	operateInput() //输入框清楚按钮
 
 	//tab切换
 	function tabs() {
@@ -8,9 +8,6 @@ $(document).ready(function() {
 			if($(this).children('span').attr('class') == 'active') {
 				return null
 			} else {
-				$('input').val('')
-				buttonColor()
-				buttonColor1()
 				$(this).children('span').attr('class', 'active').parent().siblings().children('span').removeAttr('class')
 				$('body').css('opacity', '0')
 				$('body').stop().animate({
@@ -23,11 +20,15 @@ $(document).ready(function() {
 			} else {
 				$('div.shortcut').show().siblings('div.direct').hide()
 			}
+			$('i.phoneNum').trigger('click')
+			$('i.password').trigger('click')
+			$('i.phoneShortcut').trigger('click')
+			$('i.verify').trigger('click')
 		})
 	}
 
-	//输入框动态
-	function clearInput() {
+	//输入框动态操作
+	function operateInput() {
 		$('input#phoneNum').on('input', function() {
 			if($(this).val()) {
 				$('i.phoneNum').css('display', 'block')
@@ -59,10 +60,32 @@ $(document).ready(function() {
 		})
 
 		$('input#phoneShortcut').on('input', function() {
+			if($(this).val()) {
+				$('i.phoneShortcut').css('display', 'block')
+			} else {
+				$('i.phoneShortcut').css('display', 'none')
+			}
 			buttonColor1()
 		})
 
 		$('input#verify').on('input', function() {
+			if($(this).val()) {
+				$('i.verify').css('display', 'block')
+			} else {
+				$('i.verify').css('display', 'none')
+			}
+			buttonColor1()
+		})
+		
+		$('i.phoneShortcut').on('click', function() {
+			$(this).css('display', 'none')
+			$('input#phoneShortcut').val('')
+			buttonColor()
+		})
+		
+		$('i.verify').on('click', function() {
+			$(this).css('display', 'none')
+			$('input#verify').val('')
 			buttonColor1()
 		})
 	}
@@ -78,7 +101,7 @@ $(document).ready(function() {
 		}
 	}
 
-	//登录按钮的颜色控制1
+	//快捷登录按钮的颜色控制
 	function buttonColor1() {
 		if($('input#phoneShortcut').val() && $('input#verify').val() && $('.protocol label').attr('class')) {
 			$('div.loginButtonShortcut button').css('opacity', '1')
@@ -91,38 +114,51 @@ $(document).ready(function() {
 
 	//登录
 	$('div.loginButton button').unbind().on('click', function() {
-		console.log(buttonColor())
 		if(buttonColor()) {
-			pointOut('登录成功！')
+			var phoneNum = $('input#phoneNum').val() 
+			var password = $('input#password').val()
+			if(!phoneRule.exec(phoneNum)){
+				pointOut('手机号格式不正确！')
+			}else if(!passwordRule.exec(password)) {
+				pointOut('密码为6-16位字母数字组合！')
+			}else{
+				pointOut('登录成功！')
+				window.open('../../view/shop/orderView.html')
+			}
 		} else {
 			pointOut('请完善信息！')
 		}
-
 	})
 
-	//登录1
+	//快捷登录
 	$('div.loginButtonShortcut button').unbind().on('click', function() {
-		console.log(buttonColor())
 		if(buttonColor1()) {
-			pointOut('登录成功！')
+			var phoneShortcut = $('input#phoneShortcut').val() 
+			var verify = $('input#verify').val().length
+			if(!phoneRule.exec(phoneShortcut)){
+				pointOut('手机号格式不正确！')
+			}else if(verify !== 6) {
+				pointOut('请输入6位验证码！')
+			}else{
+				pointOut('登录成功！')
+				window.open('../../view/shop/orderView.html')
+			}
 		} else {
 			if($('.protocol label').attr('class')){
 				pointOut('请完善信息！')
 			}else{
 				pointOut('请仔细阅读服务协议！')
 			}
-			
 		}
 	})
 
 	//输入手机号获取验证码
 	$('div.getVerify').on('click', function(event) {
-		var regEX = /^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|17[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/
 		var phoneNum = $('input#phoneShortcut').val()
 		if(event.target.nodeName.toLowerCase() == 'a') {
 			if(phoneNum) {
-				if(!regEX.exec(phoneNum)) {
-					pointOut('请填写正确的手机号！')
+				if(!phoneRule.exec(phoneNum)) {
+					pointOut('手机号格式不正确！')
 				} else {
 					pointOut('验证码发送成功！')
 					$(this).find('a').remove()
