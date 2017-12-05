@@ -1,0 +1,214 @@
+/*购物车*/
+
+html {}
+
+body {
+	display: none;
+	margin: 0 auto;
+	background-color: #EEEEEE;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	max-width: 640px;
+	height: 44px;
+	font-size: 16px;
+	line-height: 44px;
+	text-align: center;
+	background: url(../../img/logo.png)no-repeat 45px center;
+	background-size: 50px;
+	background-color: #FFFFFF;
+}
+
+header a.back {
+	font-size: 14px;
+	color: #888;
+	padding-left: 20px;
+}
+
+header a.edit {
+	font-size: 14px;
+	padding-right: 15px;
+}
+
+section {
+	margin-top: 44px;
+}
+
+section div.shop {
+	float: left;
+	margin-top: 10px;
+}
+
+input[type = 'checkbox'] {
+	/*display: none;*/
+    position: absolute;
+    z-index: 0;
+    left: 0px;
+    /*top: -20px;*/
+}
+
+label{
+	position: relative;
+    display: inline-block;
+    z-index: 1;
+	background: url(../../img/no_check.png) no-repeat;
+	background-size: 14px;
+    margin-left: 10px;
+    border-radius: 1px;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+
+label.mark{
+	
+	background: url(../../img/check.png) no-repeat;
+	background-size: 14px;
+	
+}
+
+section div.shop div.shop_title {
+	background-color: #FFFFFF;
+	/*padding: 15px 0;*/
+	height: 40px;
+	line-height: 40px;
+}
+
+section div.shop div.shop_title div.shop_all .shop_choice {
+	margin-left: 20px;
+}
+
+section div.shop div.shop_title i.icon-dianpu {
+	margin-left: 10px;
+}
+
+section div.shop div.shop_title span.shop_name {
+	margin: 0 8px 0 5px;
+	max-width: 50%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+section div.shop div.shop_title i.icon-right {
+	display: block;
+	font-size: 12px;
+	line-height: 40px;
+	color: #9a9a9a;
+}
+
+section div.shop div.shop_title a.edit {
+	padding-right: 15px;
+}
+
+section div.shop ul {
+	width: 100%;
+}
+
+section div.shop ul li {
+	float: left;
+	width: 100%;
+	background-color: #f8f8f8;
+	display: flex;
+	flex-direction: row;
+	padding: 15px 0;
+	border-bottom: 1px solid #ddd;
+}
+
+section div.shop ul li img {
+	float: left;
+	display: block;
+	width: 80px;
+	height: 80px;
+	margin: 0 10px 0 10px;
+}
+
+section div.shop ul li div.goods_detail {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+section div.shop ul li div p span.goods_name {
+	float: left;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+
+section div.shop ul li div p.goods_price {
+	margin-top: 20px;
+	font-size: 14px;
+	color: #c60a1e;
+}
+
+section div.shop ul li div p.goods_price a {
+	font-size: 14px;
+	color: #c60a1e;
+}
+
+section div.shop ul li span.goods_num {
+	display: block;
+	min-width: 40px;
+	text-align: center;
+}
+
+section div.shop ul li span.goods_num {
+	font-size: 12px;
+	color: #9a9a9a;
+	line-height: 15px;
+}
+
+section div.shop ul li span.goods_num a {
+	font-size: 12px;
+	color: #9a9a9a;
+	line-height: 15px;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	max-width: 640px;
+	height: 50px;
+	background-color: rgba(247, 247, 247, .96);
+	display: flex;
+	flex-direction: row;
+}
+
+footer div.all_check {
+	flex: 1;
+}
+
+footer div.settle_accounts {
+	display: flex;
+	flex-direction: row;
+}
+
+footer div.settle_accounts p.total{
+	font-size: 14px;
+	color: #404040;
+	line-height: 50px;
+	margin-right: 15px;
+}
+
+footer div.settle_accounts p.total span,footer div.settle_accounts p.total a{
+	color: #c60a1e;
+}
+
+footer div.settle_accounts span.to_pay {
+	width: 110px;
+	font-size: 16px;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 50px;
+	background-image: linear-gradient(to bottom,#f6402b,#da071c);
+}
+
+footer div.settle_accounts span.to_pay a{
+	color: #FFFFFF;
+}

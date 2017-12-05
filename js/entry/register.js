@@ -134,7 +134,7 @@ $(document).ready(function() {
 			console.log(verify)
 			if(passwordRule.exec(setPassword) && verify === 6) {
 				pointOut('注册成功！')
-				window.open('../../view/shop/orderView.html')
+				window.open('../../view/order/orderView.html')
 			} else if(verify !== 6) {
 				pointOut('验证码错误！')
 			} else {

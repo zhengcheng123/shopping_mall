@@ -1,0 +1,141 @@
+/*订单中心css*/
+html{
+	background: #f0f0f0;
+	/*height: 100%;*/
+}
+
+body{
+	margin: 0 auto;
+}
+
+header{
+	height: 44px;
+	line-height: 44px;
+	color: #222222;
+	background: url(../../img/logo.png)no-repeat 20px center;
+	background-color: #FFFFFF;
+	background-size: 50px;
+	padding: 0 20px;
+}
+
+header img.logo{
+	width: 44px;
+}
+
+header div{
+	font-size: 16px;
+	line-height: 44px;
+}
+
+header i.iconfont{
+	float: left;
+	display: block;
+	font-size: 18px;
+	margin: 2px 5px 0 0;
+	height: 42px;
+}
+
+section.user_status{
+	width: 100%;
+	height: 145px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+section{
+	background-color: #FFFFFF;
+}
+
+section button{
+	width: 140px;
+	height: 40px;
+	border: none;
+	border-radius: 2px;
+	background-color: #c60a1e;
+	font-size: 16px;
+	color: #FFFFFF;
+}
+
+section.order {
+	margin-top: 10px;
+	padding: 15px 20px;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+section.order div.my_order{
+
+}
+
+section.order div.my_order span{
+	font-size: 16px;
+	color: #222222;
+}
+
+section.order div.my_order a{
+	font-size: 12px;
+	color: #999999;
+	margin-right: 5px;
+}
+
+nav {
+	background: #FFFFFF;
+	padding: 20px 0;
+}
+
+nav ul{
+	display: inline-block;
+	width: 100%;
+}
+
+nav ul li{
+	float: left;
+	width: 20%;
+	text-align: center;
+}
+
+nav ul li i.iconfont{
+	font-size: 20px;
+	color: #333;
+}
+
+nav ul li p{
+	color: #666;
+	margin-top: 5px;
+}
+
+div.other_more{
+	margin-top: 10px;
+	background: #FFFFFF;
+}
+
+div.other_more ul{
+	display: inline-block;
+	width: 100%;
+}
+
+div.other_more ul li {
+	float: left;
+	width: 25%;
+	text-align: center;
+	padding: 25px 0;
+	border-right: 1px solid #EEEEEE;
+	/*border-bottom: 1px solid #EEEEEE;*/
+}
+
+div.other_more ul li:nth-of-type(4) {
+	border-right: none;
+}
+
+div.other_more ul li i.iconfont{
+	color: #F1462F;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+div.other_more ul li p{
+    font-size: 14px;
+    color: #000;
+    margin-top: 10px;
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="email=no" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<title>商品详情</title>
+		<link rel="stylesheet" type="text/css" href="../../static/icon_font/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="../../plugin/Swiper-4.0.5/css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/public.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/goods/shopHome.css" />
+	</head>
+
+	<body>
+		<!--头部-->
+		<header>
+			<div class="right">
+				<img src="../../img/head.jpg" alt="" class="head" />
+				<span>|</span>
+				<i class="iconfont icon-gouwuchekong"></i>
+				<span>|</span> 订单
+			</div>
+		</header>
+
+		<!--轮播图部分-->
+		<div class="banner">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<!--必须方形图-->
+					<div class="swiper-slide"><img src="../../img/goods1.jpg" /></div>
+					<div class="swiper-slide"><img src="../../img/goods2.jpg" /></div>
+					<div class="swiper-slide"><img src="../../img/goods3.jpg" /></div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+
+		<!--卖家信息-->
+		<section>
+			<div class="goods_title clearfix">
+				<div class="left">
+					<h3>一只鸡腿</h3>
+					<p>¥
+						<a>6666.66</a>
+					</p>
+				</div>
+				<div class="right">
+					<i class="iconfont icon-fenxiang"></i>
+				</div>
+			</div>
+			<!--平台标签-->
+			<div class="label_show clearfix">
+				<ul>
+					<li>店铺担保交易</li>
+					<li>微信支付</li>
+					<li>支付宝支付</li>
+				</ul>
+			</div>
+			<!--选择商品型号-->
+			<div class="chose_type">
+				选择 商品型号
+				<span class="right-arrow right"></span>
+			</div>
+
+			<div class="seller clearfix">
+				<img src="../../img/head.jpg" class="seller" />
+				<div>
+					<p>不知名主播<span>6小时前登陆</span></p>
+				</div>
+			</div>
+
+			<div class="tab clearfix">
+				<ul>
+					<li><i class="iconfont icon-fenlei1"></i>商品分类</li>
+					<li><i class="iconfont icon-jinrudianpu"></i>进入店铺</li>
+				</ul>
+			</div>
+
+			<div class="goods_detail clearfix">
+				<h3>商品详情</h3>
+				<p>假装是文字假装是文字假装是文字假装是文字假装是文字假装是文字假装是文字</p>
+				<p><img src="../../img/goodsDetail1.jpg" /></p>
+				<div class="goods_list">
+					<h3>相关推荐</h3>
+					<ul>
+						<li>
+							<img src="../../img/goods3.jpg" />
+							<span>商品名称</span>
+							<p>¥
+								<a>6666.66</a>
+							</p>
+						</li>
+						<li>
+							<img src="../../img/goods1.jpg" />
+							<span>商品名称</span>
+							<p>¥
+								<a>6666.66</a>
+							</p>
+						</li>
+						<li>
+							<img src="../../img/goods2.jpg" />
+							<span>商品名称</span>
+							<p>¥
+								<a>6666.66</a>
+							</p>
+						</li>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--底部操作-->
+			<footer>
+				<ul>
+					<li><i class="iconfont icon-lianxi"></i>
+						<p>客服</p>
+					</li>
+					<li><i class="iconfont icon-dianpu"></i>
+						<p>进店</p>
+					</li>
+					<li><i class="iconfont icon-shoucang"></i></i><i class="iconfont icon-aixin"></i>
+						<p>收藏</p>
+					</li>
+					<li class="btn"><button class="put">加入购物车</button></li>
+					<li class="btn"><button class="buy">立即购买</button></li>
+				</ul>
+			</footer>
+			<!--规格-->
+			<div id="specification">
+				<div class="main clearfix">
+					<div class="top clearfix">
+						<img src="../../img/goods3.jpg" alt="" class="buy_img" />
+						<p>¥
+							<a>6666.66</a>
+						</p>
+						<i class="fa fa-times right close" aria-hidden="true"></i>
+					</div>
+					<div class="chose">
+						<h3>型号尺寸</h3>
+						<ul>
+							<li>40</li>
+							<li>41</li>
+							<li>42</li>
+							<li>43</li>
+						</ul>
+						<h3>数量</h3>
+						<p class="num">
+							<span class="reduce">-</span><input type="" name="" id="goods_Num" value="1" /><span class="plus">+</span>库存<a class="stock">8</a>件
+						</p>
+					</div>
+					<div class="sure"><button>确定</button></div>
+				</div>
+			</div>
+		</section>
+		<script src="../../js/common/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/effect.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/jquery.fly.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugin/Swiper-4.0.5/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/swiper.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/goods/shopHome.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

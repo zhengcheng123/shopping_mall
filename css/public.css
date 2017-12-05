@@ -69,7 +69,16 @@ input::-webkit-input-placeholder{
 	font-size: 16px;
 }
 
-
+span.right-arrow {
+	width: 8px;
+    height: 8px;
+    margin-top: 5px;
+    border-bottom: 1px solid #999;
+    border-right: 1px solid #999;
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
 
 /*自定义组件样式*/
 /*文字提示*/
@@ -84,6 +93,8 @@ input::-webkit-input-placeholder{
 	bottom: 20px;
     left: 50%;
     transform: translate(-50%);
+    z-index: 9999999999999999999999999999;
 }
 
 　　
+
