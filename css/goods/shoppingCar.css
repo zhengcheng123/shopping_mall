@@ -20,6 +20,7 @@ header {
 	background: url(../../img/logo.png)no-repeat 45px center;
 	background-size: 50px;
 	background-color: #FFFFFF;
+	z-index: 999;
 }
 
 header a.back {
@@ -35,6 +36,7 @@ header a.edit {
 
 section {
 	margin-top: 44px;
+	margin-bottom: 60px;
 }
 
 section div.shop {
@@ -43,42 +45,45 @@ section div.shop {
 }
 
 input[type = 'checkbox'] {
-	/*display: none;*/
-    position: absolute;
-    z-index: 0;
-    left: 0px;
-    /*top: -20px;*/
+	display: none;
 }
 
 label{
 	position: relative;
     display: inline-block;
-    z-index: 1;
+    z-index: 9;
 	background: url(../../img/no_check.png) no-repeat;
-	background-size: 14px;
-    margin-left: 10px;
+	background-size: 20px;
+    margin: 0 4px 0 16px;
     border-radius: 1px;
-    width: 14px;
-    height: 14px;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
 }
 
 label.mark{
-	
 	background: url(../../img/check.png) no-repeat;
-	background-size: 14px;
+	background-size: 20px;
 	
+}
+
+section div.shop {
+	width: 100%;
 }
 
 section div.shop div.shop_title {
 	background-color: #FFFFFF;
-	/*padding: 15px 0;*/
 	height: 40px;
 	line-height: 40px;
 }
 
-section div.shop div.shop_title div.shop_all .shop_choice {
-	margin-left: 20px;
+section div.shop div.shop_title div.shop_all{
+	position: relative;
+}
+
+section div.shop div.shop_title div.shop_all label.shop_all_check{
+	display: block;
+	margin-top: 10px;
 }
 
 section div.shop div.shop_title i.icon-dianpu {
@@ -109,16 +114,38 @@ section div.shop ul {
 }
 
 section div.shop ul li {
+	position: relative;
 	float: left;
 	width: 100%;
+	height: 110px;
 	background-color: #f8f8f8;
 	display: flex;
 	flex-direction: row;
-	padding: 15px 0;
 	border-bottom: 1px solid #ddd;
 }
 
-section div.shop ul li img {
+section div.shop ul li div.content {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	padding: 15px 0;
+}
+
+section div.shop ul li div.content div.chk{
+	position: relative;
+ 	display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: transparent;
+	    
+}
+
+section div.shop ul li div.content img {
 	float: left;
 	display: block;
 	width: 80px;
@@ -126,13 +153,18 @@ section div.shop ul li img {
 	margin: 0 10px 0 10px;
 }
 
-section div.shop ul li div.goods_detail {
+section div.shop ul li div.content div.goods_detail {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
 }
 
-section div.shop ul li div p span.goods_name {
+section div.shop ul li div.content div.goods_detail p{
+	float: left;
+	width: 100%;
+}
+
+section div.shop ul li div.content div.goods_detail p span.goods_name {
 	float: left;
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
@@ -140,33 +172,95 @@ section div.shop ul li div p span.goods_name {
 	overflow: hidden;
 }
 
-section div.shop ul li div p.goods_price {
-	margin-top: 20px;
+section div.shop ul li div.content div.goods_detail p.model {
+	margin-top: 5px;
+	font-size: 12px;
+	color: #9a9a9a;
+}
+
+section div.shop ul li div.content div.goods_detail p.goods_price {
+	margin-top: 4px;
 	font-size: 14px;
 	color: #c60a1e;
 }
 
-section div.shop ul li div p.goods_price a {
+section div.shop ul li div.content div p.goods_price a {
 	font-size: 14px;
 	color: #c60a1e;
 }
 
-section div.shop ul li span.goods_num {
+section div.shop ul li div.content span.goods_num {
 	display: block;
 	min-width: 40px;
 	text-align: center;
 }
 
-section div.shop ul li span.goods_num {
+section div.shop ul li div.content span.goods_num {
 	font-size: 12px;
 	color: #9a9a9a;
 	line-height: 15px;
 }
 
-section div.shop ul li span.goods_num a {
+section div.shop ul li div.content span.goods_num a {
 	font-size: 12px;
 	color: #9a9a9a;
 	line-height: 15px;
+}
+
+section div.shop ul li div.content div.chose_num {
+	display: none;
+	flex: 1;
+}
+
+section div.shop ul li div.content div.chose_num p{
+	float: left;
+	width: 100%;
+	font-size: 12px;
+	line-height: 24px;
+	color: #999;
+	margin-top: 2px;
+}
+
+section div.shop ul li div.content div.chose_num p span{
+	float: left;
+	display: block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    top: 0;
+    font-family: serif;
+    font-size: 25px;
+    color: #d93229;
+    text-align: center;
+    border: 1px solid #c4c4c4;
+    background-color: #fff;
+}
+
+section div.shop ul li div.content div.chose_num p input {
+	float: left;
+	width: 50px;
+	height: 34px;
+	text-align: center;
+	font-size: 16px;
+	border: none;
+	border-bottom: 1px solid #C4C4C4;
+	border-top: 1px solid #C4C4C4;
+}
+
+section div.shop ul li div.content div.chose_num p i.icon-down{
+	font-size: 12px;
+	margin-right: 20px;
+}
+
+section div.shop ul li div.goods_delete{
+	display: none;
+	width: 60px;
+	height: 100%;
+	line-height: 110px;
+	color: #FFFFFF;
+	text-align: center;
+	background-color: #eb2925;
+	border-top: 1px solid #F7F7F7;
 }
 
 footer {
@@ -175,13 +269,23 @@ footer {
 	width: 100%;
 	max-width: 640px;
 	height: 50px;
+	border-top: 1px solid #ddd;
 	background-color: rgba(247, 247, 247, .96);
 	display: flex;
 	flex-direction: row;
+	z-index: 999;
 }
 
 footer div.all_check {
 	flex: 1;
+	margin-top: 8px;
+}
+
+footer div.all_check p{
+	color: #666666;
+	font-size: 12px;
+	line-height: 12px;
+	padding-left: 16px;
 }
 
 footer div.settle_accounts {
@@ -190,17 +294,27 @@ footer div.settle_accounts {
 }
 
 footer div.settle_accounts p.total{
-	font-size: 14px;
+	font-size: 12px;
 	color: #404040;
 	line-height: 50px;
 	margin-right: 15px;
 }
 
 footer div.settle_accounts p.total span,footer div.settle_accounts p.total a{
+	font-size: 14px;
 	color: #c60a1e;
 }
 
 footer div.settle_accounts span.to_pay {
+	width: 110px;
+	font-size: 16px;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 50px;
+	background-image: linear-gradient(to bottom,#cacaca,#cacaca);
+}
+
+footer div.settle_accounts span.to_pay.btn_sty{
 	width: 110px;
 	font-size: 16px;
 	color: #FFFFFF;
@@ -211,4 +325,122 @@ footer div.settle_accounts span.to_pay {
 
 footer div.settle_accounts span.to_pay a{
 	color: #FFFFFF;
+}
+
+footer div.all_chose_delete {
+	display: none;
+}
+
+footer div.all_chose_delete span.to_delete{
+	display: block;
+	width: 110px;
+	height: 100%;
+	font-size: 16px;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 50px;
+	background-image: linear-gradient(to bottom,#cacaca,#cacaca);
+}
+
+footer div.all_chose_delete span.to_delete.btn_sty{
+	display: block;
+	width: 110px;
+	height: 100%;
+	font-size: 16px;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 50px;
+	background-image: linear-gradient(to bottom,#f6402b,#da071c);
+}
+
+
+/*规格选择css*/
+#specification {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	z-index: 9999;
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	max-width: 640px;
+	height: 100%;
+}
+
+#specification div.main{
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+}
+
+#specification div{
+	background: #FFFFFF;
+}
+
+#specification div div.top{
+	padding: 15px;
+	border-bottom: 1px solid #DDDDDD;
+}
+
+#specification div div.top img.buy_img{
+	float: left;
+	width: 100px;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	margin: -30px 15px 0 5px;
+	z-index: 99;
+}
+
+#specification div div.top p{
+	float: left;
+	color: #d93229;
+	font-size: 16px;
+}
+
+#specification div div.top p a{
+	color: #d93229;
+	font-size: 16px;
+}
+
+#specification div div.top i.fa{
+	font-size: 16px;
+	color: #888;
+}
+
+#specification div div.chose{
+	padding: 15px 20px;
+}
+
+#specification div div.chose h3{
+	font-size: 14px;
+	font-weight: normal;
+	color: #888;
+	margin-bottom: 10px;
+}
+
+#specification div div.chose ul{
+	display: inline-block;
+}
+
+#specification div div.chose ul li{
+	float: left;
+	padding: 0 15px;
+	border: 1px solid #DDDDDD;
+	margin-right: 10px;
+	font-size: 16px;
+	color: #666;
+	line-height: 30px;
+}
+
+#specification div div.chose ul li.active{
+	border-color: #c60a1e;
+	color: #c60a1e;
+}
+
+#specification div div.sure button{
+	width: 100%;
+	height: 44px;
+	background-color: #c60a1e;
+	font-size: 16px;
+	color: #FFFFFF;
+	border: none;
 }

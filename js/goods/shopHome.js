@@ -5,7 +5,7 @@ $(document).ready(function() {
 		$('#specification').fadeIn()
 		submitCode = 1
 	})
-
+	
 	$('.put').on('click', function() {
 		$('#specification').fadeIn()
 		submitCode = 1
@@ -29,23 +29,27 @@ $(document).ready(function() {
 		$('.chose ul li').removeAttr('class')
 		$('#goods_Num').val(1)
 	})
-
+	
+	//型号选择对应边框颜色改变
 	$('.chose ul li').on('click', function() {
 		$(this).attr('class', 'active').siblings().removeAttr('class')
 	})
-
+	
+	//商品数量减
 	$('p.num span.reduce').on('click', function() {
 		var num = $('#goods_Num').val()
 		num--
 		numJudge(num)
 	})
-
+	
+	//商品数量加
 	$('p.num span.plus').on('click', function() {
 		var num = $('#goods_Num').val()
 		num++
 		numJudge(num)
 	})
-
+	
+	//数量输入框改变事件
 	$('#goods_Num').on('input', function() {
 		var inputNum = $(this).val()
 		if(!inputNum) {
@@ -59,21 +63,24 @@ $(document).ready(function() {
 			return 1
 		}
 	})
-
+	
+	//确定添加
 	$('.sure button').on('click', function(event) {
 		var model = $('.chose ul li.active').html()
 		var num = $('#goods_Num').val()
 		numJudge(num)
 		if(submitCode && model && intRule.exec(num)) {
 			submitCode = 0
+			//飞入购物车效果
 			var cloneImg = $("img.buy_img").clone().css({
 				width: 50,
 				height: 50,
 				borderRadius: 50,
 			});
 			cloneImg.css('z-index', '99999')
+			//根据屏幕自适应一个left值
 			var left = ($(window).width() - $('body').width())/2
-//			console.log(left)
+			
 			cloneImg.fly({
 				start: {
 					top: $("#specification .main").position().top,
@@ -97,7 +104,7 @@ $(document).ready(function() {
 		}
 	})
 	
-	//	收藏
+	//	收藏商铺
 	$('footer ul li:nth-of-type(3)').on('click', function() {
 		if(!collectCode) {
 			$('.icon-shoucang').show()

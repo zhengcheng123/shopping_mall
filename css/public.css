@@ -5,7 +5,7 @@
 body, div, span, h1, h2, h3, h4, h5, h6, header, footer, section, article, aside, details, figcaption, figure, hgroup, nav, menu, address, time, canvas, audio, video, p, pre, sup, sub, ul, ol, li, dl, dt, dd, form, input, button, textarea, select, iframe, img, a { 
 	padding: 0; margin: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-button,input,li{
+button,input,li,label{
 	-webkit-tap-highlight-color: transparent;
 }
 
@@ -15,7 +15,7 @@ button,input,li{
 }*/
 
 body {
-	color: #000000;
+	color: #222;
 	font: 14px "微软雅黑";
 	max-width: 640px;
 }

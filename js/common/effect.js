@@ -40,6 +40,28 @@ function pointOut(message) {
 	})
 }
 
+//confirm提示
+function confirmOut(message) {
+	if($('span.confirmOut').length){
+		return null
+	}else{
+		$('body').append('<span class="pointOut">ERROR!</span>')
+	}
+
+	$('span.pointOut').html(message);
+	
+	$('span.pointOut').stop().animate({
+		opacity: 1
+	}, 500, function() {
+		setTimeout(function() {
+			$('span.pointOut').stop().animate({
+				opacity: 0
+			}, 100)
+			$('body span.pointOut').remove()
+		}, 2000)
+	})
+}
+
 setTimeout(function(){
 	$('body').css('display','block')
 },0)

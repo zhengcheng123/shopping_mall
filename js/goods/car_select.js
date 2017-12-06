@@ -14,8 +14,7 @@ $(document).ready(function() {
 			$(this).next('label').removeClass('mark')
 		}
 	})
-
-	//===============================================全局全选与单个商品的关系================================
+	//全局全选与单个商品的关系
 	$wholeChexbox.click(function() {
 		var $checkboxs = $shop.find('input[type="checkbox"]');
 		if($(this).is(':checked')) {
@@ -51,7 +50,7 @@ $(document).ready(function() {
 		})
 	})
 
-	//=======================================每个店铺checkbox与全选checkbox的关系/每个店铺与其下商品样式的变化===================================================
+	//每个店铺checkbox与全选checkbox的关系/每个店铺与其下商品样式的变化
 
 	//店铺有一个未选中，全局全选按钮取消对勾，若店铺全选中，则全局全选按钮打对勾。
 	$shopCheckbox.each(function() {
@@ -86,7 +85,7 @@ $(document).ready(function() {
 		})
 	})
 
-	//========================================每个店铺checkbox与其下商品的checkbox的关系======================================================
+	//每个店铺checkbox与其下商品的checkbox的关系
 
 	//店铺$sonChecks有一个未选中，店铺全选按钮取消选中，若全都选中，则全选打对勾
 	$shop.each(function() {
@@ -107,7 +106,6 @@ $(document).ready(function() {
 						$(this).parents('.shop').find('.shop_choice').prop("checked", true)
 						$(this).parents('.shop').find('.shop_choice').next('label').addClass('mark')
 					}
-
 				} else {
 					//否则，店铺全选取消
 					$(this).parents('.shop').find('.shop_choice').prop("checked", false)
@@ -117,118 +115,164 @@ $(document).ready(function() {
 			})
 		})
 	})
-
-	//=================================================商品数量==============================================
-	var $plus = $('.plus'),
-		$reduce = $('.reduce'),
-		$all_sum = $('.sum')
-	$plus.click(function() {
-		var $inputVal = $(this).prev('input'),
-			$count = parseInt($inputVal.val()) + 1,
-			$obj = $(this).parents('.amount_box').find('.reduce'),
-			$priceTotalObj = $(this).parents('.order_lists').find('.sum_price'),
-			$price = $(this).parents('.order_lists').find('.price').html(), //单价
-			$priceTotal = $count * parseInt($price.substring(1))
-		$inputVal.val($count)
-		$priceTotalObj.html('￥' + $priceTotal)
-		if($inputVal.val() > 1 && $obj.hasClass('reSty')) {
-			$obj.removeClass('reSty')
-		}
-		totalMoney()
-	})
-
-	$reduce.click(function() {
-		var $inputVal = $(this).next('input'),
-			$count = parseInt($inputVal.val()) - 1,
-			$priceTotalObj = $(this).parents('.order_lists').find('.sum_price'),
-			$price = $(this).parents('.order_lists').find('.price').html(), //单价
-			$priceTotal = $count * parseInt($price.substring(1))
-		if($inputVal.val() > 1) {
-			$inputVal.val($count)
-			$priceTotalObj.html('￥' + $priceTotal)
-		}
-		if($inputVal.val() == 1 && !$(this).hasClass('reSty')) {
-			$(this).addClass('reSty')
-		}
-		totalMoney()
-	});
-
-	$all_sum.keyup(function() {
-		var $count = 0,
-			$priceTotalObj = $(this).parents('.order_lists').find('.sum_price'),
-			$price = $(this).parents('.order_lists').find('.price').html(), //单价
-			$priceTotal = 0;
-		if($(this).val() == '') {
-			$(this).val('1')
-		}
-		$(this).val($(this).val().replace(/\D|^0/g, ''));
-		$count = $(this).val()
-		$priceTotal = $count * parseInt($price.substring(1))
-		$(this).attr('value', $count)
-		$priceTotalObj.html('￥' + $priceTotal)
-		totalMoney()
-	})
-
-	//======================================移除商品========================================
-
-	var $order_lists = null
-	var $order_content = ''
-	$('.delBtn').click(function() {
-		$order_lists = $(this).parents('.order_lists')
-		$order_content = $order_lists.parents('.order_content')
-		$('.model_bg').fadeIn(300)
-		$('.my_model').fadeIn(300)
-	})
-
-	//关闭模态框
-	$('.closeModel').click(function() {
-		closeM()
-	})
-	$('.dialog-close').click(function() {
-		closeM()
-	})
-
-	function closeM() {
-		$('.model_bg').fadeOut(300)
-		$('.my_model').fadeOut(300)
+	
+	//input的数量跟标记同步
+	function numChange() {
+		$('section').find('div.shop').each(function(){
+			$(this).children('ul').find('li').each(function(){
+				$(this).find('input#goods_Num').val(parseInt($(this).find('span.goods_num a').html()))
+				$(this).find('span.goods_num a').html($(this).find('input#goods_Num').val())
+			})
+		})
 	}
-	//确定按钮，移除商品
-	$('.dialog-sure').click(function() {
-		$order_lists.remove()
-		if($order_content.html().trim() == null || $order_content.html().trim().length == 0) {
-			$order_content.parents('.shop').remove()
-		}
-		closeM()
-		$sonCheckBox = $('.son_check')
-		totalMoney()
+	numChange()
+	
+
+	
+	//数量加
+	$('p.num span.plus').unbind().on('click',function(){
+		var num = $(this).siblings('#goods_Num').val()
+		var maxNum = parseInt($(this).parents('p.num').siblings('p.maxNum').find('a.stock').html())
+		num++
+		var num1 = numJudge(num,maxNum)
+		$(this).siblings('#goods_Num').val(num1)
 	})
+	
+	//数量减
+	$('p.num span.reduce').unbind().on('click',function(){
+		var num = $(this).siblings('#goods_Num').val()
+		var maxNum = parseInt($(this).parents('p.num').siblings('p.maxNum').find('a.stock').html())
+		num--
+		var num1 = numJudge(num,maxNum)
+		$(this).siblings('#goods_Num').val(num1)
+	})
+	
+	//数量判断
+	function numJudge(num,maxNum) {
+		if(num < 1) {
+			pointOut("数量已经最低了！")
+			return num = 1
+		} else if(num > maxNum) {
+			pointOut("库存不足！")
+			num = maxNum
+			return num
+		} else {
+			return num
+		}
+	}
+	
+	//头部所有商品编辑按钮
+	var editChose = 1
+	$('header a.edit').on('click',function(){ 
+		if(editChose == 1) {
+			editChose = 2
+			$(this).html('完成')
+			pageShow(editChose)
+		}else if(editChose == 2){
+			editChose = 1
+			$(this).html('编辑')
+			$('div.shop div.shop_title a.edit').html('编辑')
+			pageShow(editChose)
+		}
+	})
+	
+	//商铺编辑
+	$('div.shop div.shop_title a.edit').on('click',function(){
+		if($(this).html() == '编辑') {
+			$(this).html('完成')
+			$(this).parents('div.shop_title').siblings('ul').children('li').children('div.content').children('div.goods_detail').css('display','none')
+			$(this).parents('div.shop_title').siblings('ul').children('li').children('div.content').children('span.goods_num').css('display','none')
+			$(this).siblings('i.icon-right').css('display','none')
+			$(this).parents('div.shop_title').siblings('ul').children('li').children('div.goods_delete').css('display','block')
+			$(this).parents('div.shop_title').siblings('ul').children('li').children('div.content').children('div.chose_num').css('display','block')
+		}else if($(this).html() == '完成'){
+			$(this).html('编辑')
+			$(this).parents('div.shop_title').siblings('ul').children('li').children('div.content').children('div.goods_detail').css('display','block')
+			$(this).parents('div.shop_title').siblings('ul').children('li').children('div.content').children('span.goods_num').css('display','block')
+			$(this).siblings('i.icon-right').css('display','block')
+			$(this).parents('div.shop_title').siblings('ul').children('li').children('div.goods_delete').css('display','none')
+			$(this).parents('div.shop_title').siblings('ul').children('li').children('div.content').children('div.chose_num').css('display','none')
+		}
+	})
+	
+	// 打开型号选择
+	$('p.model').on('click',function(){
+		if($(this).find('i').hasClass('icon-down')) {
+			$('#specification').fadeIn()
+		}else{
+			console.log('请点击编辑')
+		}
+	})
+	
+	//模态框点击阴影部分退出
+	$('#specification').on('click',function(event){
+		if(event.target.id == 'specification') {
+			$(this).fadeOut()
+		}
+	})
+	
+	//点击确定 选择型号
+	$('div.sure button').on('click',function(){
+		$('#specification').fadeOut()
+	})
+	
+	//型号选择对应边框颜色改变
+	$('#specification div.chose ul li').on('click',function(){
+		$(this).attr('class', 'active').siblings().removeAttr('class')
+	})
+	
+	//控制编辑显示
+	function pageShow(key) {
+		if(key == 1) {
+			$('footer div.settle_accounts').css('display','flex')
+			$('section div.goods_detail').css('display','block')
+			$('section span.goods_num').css('display','block')
+			$('section div.shop_title a.edit').css('display','block')
+			$('section div.shop_title i.icon-right').css('display','block')
+			$('footer div.all_chose_delete').css('display','none')
+			$('section div.chose_num').css('display','none')
+			$('div.goods_delete').css('display','none')
+		}else if(key == 2){
+			$('footer div.settle_accounts').css('display','none')
+			$('section div.goods_detail').css('display','none')
+			$('section span.goods_num').css('display','none')
+			$('section div.shop_title a.edit').css('display','none')
+			$('section div.shop_title i.icon-right').css('display','none')
+			$('div.goods_delete').css('display','none')
+			$('section div.goods_detail p.model').css('display','block')
+			$('footer div.all_chose_delete').css('display','block')
+			$('section div.chose_num').css('display','block')
+		}
+	}
 
-	//======================================总计==========================================
-
+	//结算
 	function totalMoney() {
 		var total_money = 0
 		var total_count = 0
 		var kind = 0
-		var calBtn = $('.calBtn a')
+		var calBtn = $('footer span.to_pay')
+		var deleteBtn = $('footer span.to_delete')
 		$sonCheckBox.each(function() {
 			if($(this).is(':checked')) {
 				kind++
-				var goods = parseInt($(this).parents('li').children('.goods_detail').find('.goods_price a').html())
-				var num = parseInt($(this).parents('li').children('span.goods_num').find('a').html())
+				var goods = parseFloat($(this).parents('li .content').children('.goods_detail').find('.goods_price a').html()).toFixed(2)
+				var num = parseInt($(this).parents('li .content').children('span.goods_num').find('a').html())
 				total_money += goods * num
 				total_count += num
 			}
 		});
-		$('.settle_accounts p.total a').html(total_money)
+		$('.settle_accounts p.total a').html(total_money.toFixed(2))
 		$('span.to_pay').find('a').html(kind)
 
 		if(total_money != 0 && total_count != 0) {
 			if(!calBtn.hasClass('btn_sty')) {
 				calBtn.addClass('btn_sty')
+				deleteBtn.addClass('btn_sty')
 			}
 		} else {
 			if(calBtn.hasClass('btn_sty')) {
 				calBtn.removeClass('btn_sty')
+				deleteBtn.removeClass('btn_sty')
 			}
 		}
 	}

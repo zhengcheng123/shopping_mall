@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="email=no" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<title>购物车</title>
+		<link rel="stylesheet" type="text/css" href="../../static/icon_font/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/public.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/goods/shoppingCar.css" />
+	</head>
+
+	<body>
+		<!--购物车头部-->
+		<header>
+			<a class="back left"><i class="iconfont icon-back"></i></a>
+			购物车
+			<a class="edit right">编辑</a>
+		</header>
+
+		<!--购物车内容-->
+		<section class="clearfix">
+			<!--shop_a,shop_b...为店铺标识
+				checkbox_1、checkbox_2...为商品标识-->
+
+			<div class="shop">
+				<!--店铺标题-->
+				<div class="shop_title">
+					<!--店铺全选-->
+					<div class="shop_all left">
+						<input type="checkbox" id="shop_a" class="shop_choice">
+						<label for="shop_a" class="shop_all_check"></label>
+					</div>
+
+					<i class="iconfont icon-dianpu left"></i></a>
+					<span class="shop_name left">点盈小卖部</span>
+					<i class="iconfont icon-right left"></i></a>
+
+					<a class="edit right">编辑</a>
+				</div>
+				<!--商品-->
+				<ul>
+					<li>
+						<div class="content">
+							<div class="chk">
+								<input type="checkbox" id="checkbox_1" class="son_check">
+								<label for="checkbox_1"></label>
+							</div>
+							<img src="../../img/goods1.jpg" class="goods_img" />
+							<div class="goods_detail">
+								<p><span class="goods_name">四川安岳柠檬一级果产地现摘现发多种规格包邮四川安岳柠檬一级果产地现摘现发多种规格包邮四川安岳柠檬一级果产地现摘现发多种规格包邮</span></p>
+								<p class="model">五斤装</p>
+								<p class="goods_price">¥
+									<a>399.00</a>
+								</p>
+							</div>
+							<span class="goods_num">x<a>5</a></span>
+							<!--编辑的时候显示数量调整-->
+							<div class="chose_num">
+								<p class="num">
+									<span class="reduce">-</span><input type="" name="" id="goods_Num" value="1" /><span class="plus">+</span>
+								</p>
+								<!--有i就可以点击选择型号-->
+								<p class="model">五斤装<i class="iconfont icon-down right"></i></p>
+								<p class="maxNum">库存
+									<a class="stock">9</a>件</p>
+							</div>
+						</div>
+						<div class="goods_delete">
+							删除
+						</div>
+					</li>
+					<li>
+						<div class="content">
+							<div class="chk">
+								<input type="checkbox" id="checkbox_2" class="son_check">
+								<label for="checkbox_2"></label>
+							</div>
+							<img src="../../img/goods2.jpg" class="goods_img" />
+							<div class="goods_detail">
+								<p><span class="goods_name">很牛逼的车</span></p>
+								<!--<p class="model"></p>-->
+								<p class="goods_price">¥
+									<a>399.00</a>
+								</p>
+							</div>
+							<span class="goods_num">x<a>7</a></span>
+							<!--编辑的时候显示数量调整-->
+							<div class="chose_num">
+								<p class="num">
+									<span class="reduce">-</span><input type="" name="" id="goods_Num" value="1" /><span class="plus">+</span>
+								</p>
+								<!--<p class="model"></p>-->
+								<p class="maxNum">库存
+									<a class="stock">10</a>件</p>
+							</div>
+						</div>
+						<div class="goods_delete">
+							删除
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="shop">
+				<!--店铺标题-->
+				<div class="shop_title">
+					<!--店铺全选-->
+					<div class="shop_all left">
+						<input type="checkbox" id="shop_b" class="shop_choice">
+						<label for="shop_b" class="shop_all_check"></label>
+					</div>
+
+					<i class="iconfont icon-dianpu left"></i></a>
+					<span class="shop_name left">金陵味道</span>
+					<i class="iconfont icon-right left"></i></a>
+
+					<a class="edit right">编辑</a>
+				</div>
+				<!--商品-->
+				<ul>
+					<li>
+						<div class="content">
+							<div class="chk">
+								<input type="checkbox" id="checkbox_3" class="son_check">
+								<label for="checkbox_3"></label>
+							</div>
+							<img src="../../img/goods1.jpg" class="goods_img" />
+							<div class="goods_detail">
+								<p><span class="goods_name">四川安岳柠檬一级果产地现摘现发多种规格包邮四川安岳柠檬一级果产地现摘现发多种规格包邮四川安岳柠檬一级果产地现摘现发多种规格包邮</span></p>
+								<p class="model">五斤装</p>
+								<p class="goods_price">¥
+									<a>399.00</a>
+								</p>
+							</div>
+							<span class="goods_num">x<a>3</a></span>
+							<!--编辑的时候显示数量调整-->
+							<div class="chose_num">
+								<p class="num">
+									<span class="reduce">-</span><input type="" name="" id="goods_Num" value="1" /><span class="plus">+</span>
+								</p>
+								<!--有i就可以点击选择型号-->
+								<p class="model">五斤装<i class="iconfont icon-down right"></i></p>
+								<p class="maxNum">库存
+									<a class="stock">6</a>件</p>
+							</div>
+						</div>
+						<div class="goods_delete">
+							删除
+						</div>
+					</li>
+					<li>
+						<div class="content">
+							<div class="chk">
+								<input type="checkbox" id="checkbox_4" class="son_check">
+								<label for="checkbox_4"></label>
+							</div>
+							<img src="../../img/goods2.jpg" class="goods_img" />
+							<div class="goods_detail">
+								<p><span class="goods_name">很牛逼的车</span></p>
+								<!--<p class="model"></p>-->
+								<p class="goods_price">¥
+									<a>399.00</a>
+								</p>
+							</div>
+							<span class="goods_num">x<a>11</a></span>
+							<!--编辑的时候显示数量调整-->
+							<div class="chose_num">
+								<p class="num">
+									<span class="reduce">-</span><input type="" name="" id="goods_Num" value="1" /><span class="plus">+</span>
+								</p>
+								<!--<p class="model"></p>-->
+								<p class="maxNum">库存
+									<a class="stock">15</a>件</p>
+							</div>
+						</div>
+						<div class="goods_delete">
+							删除
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="shop">
+				<!--店铺标题-->
+				<div class="shop_title">
+					<!--店铺全选-->
+					<div class="shop_all left">
+						<input type="checkbox" id="shop_c" class="shop_choice">
+						<label for="shop_c" class="shop_all_check"></label>
+					</div>
+
+					<i class="iconfont icon-dianpu left"></i></a>
+					<span class="shop_name left">紫鼎汇</span>
+					<i class="iconfont icon-right left"></i></a>
+
+					<a class="edit right">编辑</a>
+				</div>
+				<!--商品-->
+				<ul>
+					<li>
+						<div class="content">
+							<div class="chk">
+								<input type="checkbox" id="checkbox_5" class="son_check">
+								<label for="checkbox_5"></label>
+							</div>
+							<img src="../../img/goods1.jpg" class="goods_img" />
+							<div class="goods_detail">
+								<p><span class="goods_name">四川安岳柠檬一级果产地现摘现发多种规格包邮四川安岳柠檬一级果产地现摘现发多种规格包邮四川安岳柠檬一级果产地现摘现发多种规格包邮</span></p>
+								<p class="model">五斤装</p>
+								<p class="goods_price">¥
+									<a>399.00</a>
+								</p>
+							</div>
+							<span class="goods_num">x<a>16</a></span>
+							<!--编辑的时候显示数量调整-->
+							<div class="chose_num">
+								<p class="num">
+									<span class="reduce">-</span><input type="" name="" id="goods_Num" value="1" /><span class="plus">+</span>
+								</p>
+								<!--有i就可以点击选择型号-->
+								<p class="model">五斤装<i class="iconfont icon-down right"></i></p>
+								<p class="maxNum">库存
+									<a class="stock">30</a>件</p>
+							</div>
+						</div>
+						<div class="goods_delete">
+							删除
+						</div>
+					</li>
+					<li>
+						<div class="content">
+							<div class="chk">
+								<input type="checkbox" id="checkbox_6" class="son_check">
+								<label for="checkbox_6"></label>
+							</div>
+							<img src="../../img/goods2.jpg" class="goods_img" />
+							<div class="goods_detail">
+								<p><span class="goods_name">很牛逼的车</span></p>
+								<!--<p class="model"></p>-->
+								<p class="goods_price">¥
+									<a>399.00</a>
+								</p>
+							</div>
+							<span class="goods_num">x<a>3</a></span>
+							<!--编辑的时候显示数量调整-->
+							<div class="chose_num">
+								<p class="num">
+									<span class="reduce">-</span><input type="" name="" id="goods_Num" value="1" /><span class="plus">+</span>
+								</p>
+								<!--<p class="model"></p>-->
+								<p class="maxNum">库存
+									<a class="stock">18</a>件</p>
+							</div>
+						</div>
+						<div class="goods_delete">
+							删除
+						</div>
+					</li>
+				</ul>
+			</div>
+
+		</section>
+
+		<!--规格-->
+		<div id="specification">
+			<div class="main clearfix">
+				<div class="top clearfix">
+					<img src="../../img/goods3.jpg" alt="" class="buy_img" />
+					<p>¥
+						<a>6666.66</a>
+					</p>
+					<i class="fa fa-times right close" aria-hidden="true"></i>
+				</div>
+				<div class="chose">
+					<h3>型号尺寸</h3>
+					<ul>
+						<li>40</li>
+						<li>41</li>
+						<li>42</li>
+						<li>43</li>
+					</ul>
+				</div>
+				<div class="sure"><button>确定</button></div>
+			</div>
+		</div>
+
+		<!--购物车底部结算-->
+		<footer>
+			<div class="all_check">
+				<!--所有商品全选-->
+				<input type="checkbox" id="all" class="whole_check">
+				<label for="all"></label>
+				<p>全选</p>
+			</div>
+			<div class="settle_accounts">
+				<p class="total">总计：<span>¥</span>
+					<a>0.00</a>
+				</p>
+				<span class="to_pay">去结算（<a>0</a>）</span>
+			</div>
+
+			<div class="all_chose_delete">
+				<span class="to_delete">删除</span>
+			</div>
+		</footer>
+
+		<script src="../../js/common/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/effect.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/goods/car_select.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/goods/shopping_car.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>
