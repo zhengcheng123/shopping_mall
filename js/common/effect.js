@@ -64,4 +64,4 @@ function confirmOut(message) {
 
 setTimeout(function(){
 	$('body').css('display','block')
-},0)
+},1)

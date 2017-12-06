@@ -5,6 +5,7 @@ html{
 }
 
 body{
+	display: none;
 	margin: 0 auto;
 }
 
@@ -87,6 +88,7 @@ nav {
 nav ul{
 	display: inline-block;
 	width: 100%;
+	padding: 0 5px;
 }
 
 nav ul li{
@@ -101,6 +103,7 @@ nav ul li i.iconfont{
 }
 
 nav ul li p{
+	font-size: 14px;
 	color: #666;
 	margin-top: 5px;
 }

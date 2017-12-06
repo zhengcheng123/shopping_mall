@@ -1,7 +1,4 @@
 /*购物车*/
-
-html {}
-
 body {
 	display: none;
 	margin: 0 auto;
@@ -31,7 +28,7 @@ header a.back {
 
 header a.edit {
 	font-size: 14px;
-	padding-right: 15px;
+	padding-right: 12px;
 }
 
 section {
@@ -106,7 +103,7 @@ section div.shop div.shop_title i.icon-right {
 }
 
 section div.shop div.shop_title a.edit {
-	padding-right: 15px;
+	padding-right: 12px;
 }
 
 section div.shop ul {

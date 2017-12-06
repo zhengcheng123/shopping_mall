@@ -115,40 +115,68 @@ $(document).ready(function() {
 			})
 		})
 	})
-	
+
 	//input的数量跟标记同步
 	function numChange() {
-		$('section').find('div.shop').each(function(){
-			$(this).children('ul').find('li').each(function(){
+		$('section').find('div.shop').each(function() {
+			$(this).children('ul').find('li').each(function() {
 				$(this).find('input#goods_Num').val(parseInt($(this).find('span.goods_num a').html()))
-				$(this).find('span.goods_num a').html($(this).find('input#goods_Num').val())
 			})
 		})
 	}
 	numChange()
 	
+	//标记的数量跟input同步
+	function numChangeInput() {
+		$('section').find('div.shop').each(function() {
+			$(this).children('ul').find('li').each(function() {
+				$(this).find('span.goods_num a').html($(this).find('input#goods_Num').val())
+			})
+		})
+	}
 
-	
 	//数量加
-	$('p.num span.plus').unbind().on('click',function(){
+	$('p.num span.plus').unbind().on('click', function() {
 		var num = $(this).siblings('#goods_Num').val()
 		var maxNum = parseInt($(this).parents('p.num').siblings('p.maxNum').find('a.stock').html())
 		num++
-		var num1 = numJudge(num,maxNum)
+		var num1 = numJudge(num, maxNum)
 		$(this).siblings('#goods_Num').val(num1)
 	})
-	
+
 	//数量减
-	$('p.num span.reduce').unbind().on('click',function(){
+	$('p.num span.reduce').unbind().on('click', function() {
 		var num = $(this).siblings('#goods_Num').val()
 		var maxNum = parseInt($(this).parents('p.num').siblings('p.maxNum').find('a.stock').html())
 		num--
-		var num1 = numJudge(num,maxNum)
+		var num1 = numJudge(num, maxNum)
 		$(this).siblings('#goods_Num').val(num1)
 	})
-	
+
+	//数量输入框改变事件
+	$('input#goods_Num').on('input', function() {
+		var inputNum = $(this).val()
+		var maxNum = parseInt($(this).parents('p.num').siblings('p.maxNum').find('a.stock').html())
+		if(!inputNum) {
+			pointOut('请输入数量！')
+		} else if(inputNum > maxNum) {
+			pointOut('库存不足！')
+			setTimeout(function() {
+				$('#goods_Num').val(maxNum)
+			}, 1000)
+			
+		} else if(!intRule.exec(inputNum)) {
+			pointOut('您数量输入错了呢！')
+			setTimeout(function() {
+				$('#goods_Num').val(1)
+			}, 1000)
+		} else {
+			return 1
+		}
+	})
+
 	//数量判断
-	function numJudge(num,maxNum) {
+	function numJudge(num, maxNum) {
 		if(num < 1) {
 			pointOut("数量已经最低了！")
 			return num = 1
@@ -160,88 +188,92 @@ $(document).ready(function() {
 			return num
 		}
 	}
-	
+
 	//头部所有商品编辑按钮
 	var editChose = 1
-	$('header a.edit').on('click',function(){ 
+	$('header a.edit').on('click', function() {
 		if(editChose == 1) {
 			editChose = 2
 			$(this).html('完成')
+			//numChange()
 			pageShow(editChose)
-		}else if(editChose == 2){
+		} else if(editChose == 2) {
 			editChose = 1
 			$(this).html('编辑')
 			$('div.shop div.shop_title a.edit').html('编辑')
+			numChangeInput()
 			pageShow(editChose)
 		}
 	})
-	
+
 	//商铺编辑
-	$('div.shop div.shop_title a.edit').on('click',function(){
+	$('div.shop div.shop_title a.edit').on('click', function() {
 		if($(this).html() == '编辑') {
 			$(this).html('完成')
-			$(this).parents('div.shop_title').siblings('ul').children('li').children('div.content').children('div.goods_detail').css('display','none')
-			$(this).parents('div.shop_title').siblings('ul').children('li').children('div.content').children('span.goods_num').css('display','none')
-			$(this).siblings('i.icon-right').css('display','none')
-			$(this).parents('div.shop_title').siblings('ul').children('li').children('div.goods_delete').css('display','block')
-			$(this).parents('div.shop_title').siblings('ul').children('li').children('div.content').children('div.chose_num').css('display','block')
-		}else if($(this).html() == '完成'){
+			//numChange()
+			$(this).parents('div.shop_title').siblings('ul').children('li').children('div.content').children('div.goods_detail').css('display', 'none')
+			$(this).parents('div.shop_title').siblings('ul').children('li').children('div.content').children('span.goods_num').css('display', 'none')
+			$(this).siblings('i.icon-right').css('display', 'none')
+			$(this).parents('div.shop_title').siblings('ul').children('li').children('div.goods_delete').css('display', 'block')
+			$(this).parents('div.shop_title').siblings('ul').children('li').children('div.content').children('div.chose_num').css('display', 'block')
+		} else if($(this).html() == '完成') {
 			$(this).html('编辑')
-			$(this).parents('div.shop_title').siblings('ul').children('li').children('div.content').children('div.goods_detail').css('display','block')
-			$(this).parents('div.shop_title').siblings('ul').children('li').children('div.content').children('span.goods_num').css('display','block')
-			$(this).siblings('i.icon-right').css('display','block')
-			$(this).parents('div.shop_title').siblings('ul').children('li').children('div.goods_delete').css('display','none')
-			$(this).parents('div.shop_title').siblings('ul').children('li').children('div.content').children('div.chose_num').css('display','none')
+			numChangeInput()
+			$(this).parents('div.shop_title').siblings('ul').children('li').children('div.content').children('div.goods_detail').css('display', 'block')
+			$(this).parents('div.shop_title').siblings('ul').children('li').children('div.content').children('span.goods_num').css('display', 'block')
+			$(this).siblings('i.icon-right').css('display', 'block')
+			$(this).parents('div.shop_title').siblings('ul').children('li').children('div.goods_delete').css('display', 'none')
+			$(this).parents('div.shop_title').siblings('ul').children('li').children('div.content').children('div.chose_num').css('display', 'none')
 		}
 	})
-	
+
 	// 打开型号选择
-	$('p.model').on('click',function(){
+	$('p.model').on('click', function() {
 		if($(this).find('i').hasClass('icon-down')) {
 			$('#specification').fadeIn()
-		}else{
+		} else {
 			console.log('请点击编辑')
 		}
 	})
-	
+
 	//模态框点击阴影部分退出
-	$('#specification').on('click',function(event){
+	$('#specification').on('click', function(event) {
 		if(event.target.id == 'specification') {
 			$(this).fadeOut()
 		}
 	})
-	
+
 	//点击确定 选择型号
-	$('div.sure button').on('click',function(){
+	$('div.sure button').on('click', function() {
 		$('#specification').fadeOut()
 	})
-	
+
 	//型号选择对应边框颜色改变
-	$('#specification div.chose ul li').on('click',function(){
+	$('#specification div.chose ul li').on('click', function() {
 		$(this).attr('class', 'active').siblings().removeAttr('class')
 	})
-	
+
 	//控制编辑显示
 	function pageShow(key) {
 		if(key == 1) {
-			$('footer div.settle_accounts').css('display','flex')
-			$('section div.goods_detail').css('display','block')
-			$('section span.goods_num').css('display','block')
-			$('section div.shop_title a.edit').css('display','block')
-			$('section div.shop_title i.icon-right').css('display','block')
-			$('footer div.all_chose_delete').css('display','none')
-			$('section div.chose_num').css('display','none')
-			$('div.goods_delete').css('display','none')
-		}else if(key == 2){
-			$('footer div.settle_accounts').css('display','none')
-			$('section div.goods_detail').css('display','none')
-			$('section span.goods_num').css('display','none')
-			$('section div.shop_title a.edit').css('display','none')
-			$('section div.shop_title i.icon-right').css('display','none')
-			$('div.goods_delete').css('display','none')
-			$('section div.goods_detail p.model').css('display','block')
-			$('footer div.all_chose_delete').css('display','block')
-			$('section div.chose_num').css('display','block')
+			$('footer div.settle_accounts').css('display', 'flex')
+			$('section div.goods_detail').css('display', 'block')
+			$('section span.goods_num').css('display', 'block')
+			$('section div.shop_title a.edit').css('display', 'block')
+			$('section div.shop_title i.icon-right').css('display', 'block')
+			$('footer div.all_chose_delete').css('display', 'none')
+			$('section div.chose_num').css('display', 'none')
+			$('div.goods_delete').css('display', 'none')
+		} else if(key == 2) {
+			$('footer div.settle_accounts').css('display', 'none')
+			$('section div.goods_detail').css('display', 'none')
+			$('section span.goods_num').css('display', 'none')
+			$('section div.shop_title a.edit').css('display', 'none')
+			$('section div.shop_title i.icon-right').css('display', 'none')
+			$('div.goods_delete').css('display', 'none')
+			$('section div.goods_detail p.model').css('display', 'block')
+			$('footer div.all_chose_delete').css('display', 'block')
+			$('section div.chose_num').css('display', 'block')
 		}
 	}
 

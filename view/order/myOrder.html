@@ -9,11 +9,278 @@
 		<meta name="format-detection" content="email=no" />
 		<meta name="apple-touch-fullscreen" content="yes" />
 		<title>我的订单</title>
+		<link rel="icon" href="../../static/logo.ico"/>
 		<link rel="stylesheet" type="text/css" href="../../static/icon_font/iconfont.css"/>
 		<link rel="stylesheet" type="text/css" href="../../css/public.css" />
 		<link rel="stylesheet" type="text/css" href="../../css/order/myOrder.css" />
 	</head>
 	<body>
-		<div></div>
+		<header>
+			<i class="iconfont icon-back left"></i>
+			我的订单
+			<span class="right"><a href="orderCentrality.html">订单中心</a></span>
+		</header>
+		
+		<nav class="clearfix">
+			<ul>
+				<li><span class="active">全部</span></li>
+				<li><span>待付款</span></li>
+				<li><span>待发货</span></li>
+				<li><span>待收货</span></li>
+			</ul>
+		</nav>
+		
+		<section class="section all">
+			<ul>
+				<!--订单类型 /已关闭-->
+				<li>
+					<div class="goods_title">
+						<div class="shop">
+							<i class="iconfont icon-dianpu"></i>
+							<span class="shop_name">金陵味道金陵味道金陵味道道</span>
+							<i class="iconfont icon-right"></i>
+						</div>
+						<span class="status right">已关闭</span>
+					</div>
+					<div class="goods_main">
+						<img src="../../img/goods1.jpg" class="goods_img" />
+						<div class="content">
+							<p>四川安岳柠檬一级果产地现摘现发多种规格包邮</p>
+							<p class="model">型号<a>3斤装</a></p>
+						</div>
+						<div class="num">
+							<p class="price">¥<span>25.00</span></p>
+							<p class="buy_num">×<span>1</span></p>
+						</div>
+					</div>
+					<div class="gather clearfix">
+						<p>
+							共<a>1</a>件商品 总价: <span class="sp1">¥<a>25.00</a></span>（含运费<span>¥<a>0.00</a></span>）
+						</p>
+						<button class="right">删除订单</button>
+					</div>
+				</li>
+				
+				<!--订单类型 /待付款-->
+				<li>
+					<div class="goods_title">
+						<div class="shop">
+							<i class="iconfont icon-dianpu"></i>
+							<span class="shop_name">金陵味道金陵味道金陵味道道</span>
+							<i class="iconfont icon-right"></i>
+						</div>
+						<span class="status right">待付款</span>
+					</div>
+					<div class="goods_main">
+						<img src="../../img/goods1.jpg" class="goods_img" />
+						<div class="content">
+							<p>四川安岳柠檬一级果产地现摘现发多种规格包邮</p>
+							<p class="model">型号<a>3斤装</a></p>
+						</div>
+						<div class="num">
+							<p class="price">¥<span>25.00</span></p>
+							<p class="buy_num">×<span>1</span></p>
+						</div>
+					</div>
+					<div class="gather clearfix">
+						<p>
+							共<a>1</a>件商品 总价: <span class="sp1">¥<a>25.00</a></span>（含运费<span>¥<a>0.00</a></span>）
+						</p>
+						<button class="active right">继续支付</button>
+						<button class="right">关闭订单</button>
+					</div>
+				</li>
+				
+				<!--订单类型 /待收货-->
+				<li>
+					<div class="goods_title">
+						<div class="shop">
+							<i class="iconfont icon-dianpu"></i>
+							<span class="shop_name">金陵味道金陵味道金陵味道道</span>
+							<i class="iconfont icon-right"></i>
+						</div>
+						<span class="status right">待收货</span>
+					</div>
+					<div class="goods_main">
+						<img src="../../img/goods1.jpg" class="goods_img" />
+						<div class="content">
+							<p>四川安岳柠檬一级果产地现摘现发多种规格包邮</p>
+							<p class="model">型号<a>3斤装</a></p>
+						</div>
+						<div class="num">
+							<p class="price">¥<span>25.00</span></p>
+							<p class="buy_num">×<span>1</span></p>
+						</div>
+					</div>
+					<div class="gather clearfix">
+						<p>
+							共<a>1</a>件商品 总价: <span class="sp1">¥<a>25.00</a></span>（含运费<span>¥<a>0.00</a></span>）
+						</p>
+						<button class="active right">确认收货</button>
+					</div>
+				</li>
+				
+				<!--订单类型 /待发货-->
+				<li>
+					<div class="goods_title">
+						<div class="shop">
+							<i class="iconfont icon-dianpu"></i>
+							<span class="shop_name">金陵味道金陵味道金陵味道道</span>
+							<i class="iconfont icon-right"></i>
+						</div>
+						<span class="status right">待发货</span>
+					</div>
+					<div class="goods_main">
+						<img src="../../img/goods1.jpg" class="goods_img" />
+						<div class="content">
+							<p>四川安岳柠檬一级果产地现摘现发多种规格包邮</p>
+							<p class="model">型号<a>3斤装</a></p>
+						</div>
+						<div class="num">
+							<p class="price">¥<span>25.00</span></p>
+							<p class="buy_num">×<span>1</span></p>
+						</div>
+					</div>
+					<div class="gather clearfix">
+						<p>
+							共<a>1</a>件商品 总价: <span class="sp1">¥<a>25.00</a></span>（含运费<span>¥<a>0.00</a></span>）
+						</p>
+					</div>
+				</li>
+				
+				<!--订单类型 /已完成-->
+				<li>
+					<div class="goods_title">
+						<div class="shop">
+							<i class="iconfont icon-dianpu"></i>
+							<span class="shop_name">金陵味道金陵味道金陵味道道</span>
+							<i class="iconfont icon-right"></i>
+						</div>
+						<span class="status right">已完成</span>
+					</div>
+					<div class="goods_main">
+						<img src="../../img/goods1.jpg" class="goods_img" />
+						<div class="content">
+							<p>四川安岳柠檬一级果产地现摘现发多种规格包邮</p>
+							<p class="model">型号<a>3斤装</a></p>
+						</div>
+						<div class="num">
+							<p class="price">¥<span>25.00</span></p>
+							<p class="buy_num">×<span>1</span></p>
+						</div>
+					</div>
+					<div class="gather clearfix">
+						<p>
+							共<a>1</a>件商品 总价: <span class="sp1">¥<a>25.00</a></span>（含运费<span>¥<a>0.00</a></span>）
+						</p>
+						<button class="active right">查看物流</button>
+						<button class="right">删除订单</button>
+					</div>
+				</li>
+			</ul>
+		</section>
+		
+		<section class="section pay">
+			<ul>
+				<!--订单类型 /待付款-->
+				<li>
+					<div class="goods_title">
+						<div class="shop">
+							<i class="iconfont icon-dianpu"></i>
+							<span class="shop_name">金陵味道金陵味道金陵味道道</span>
+							<i class="iconfont icon-right"></i>
+						</div>
+						<span class="status right">待付款</span>
+					</div>
+					<div class="goods_main">
+						<img src="../../img/goods1.jpg" class="goods_img" />
+						<div class="content">
+							<p>四川安岳柠檬一级果产地现摘现发多种规格包邮</p>
+							<p class="model">型号<a>3斤装</a></p>
+						</div>
+						<div class="num">
+							<p class="price">¥<span>25.00</span></p>
+							<p class="buy_num">×<span>1</span></p>
+						</div>
+					</div>
+					<div class="gather clearfix">
+						<p>
+							共<a>1</a>件商品 总价: <span class="sp1">¥<a>25.00</a></span>（含运费<span>¥<a>0.00</a></span>）
+						</p>
+						<button class="active right">继续支付</button>
+						<button class="right">关闭订单</button>
+					</div>
+				</li>
+			</ul>
+		</section>
+		
+		<section class="section send">
+			<ul>
+				<!--订单类型 /待发货-->
+				<li>
+					<div class="goods_title">
+						<div class="shop">
+							<i class="iconfont icon-dianpu"></i>
+							<span class="shop_name">金陵味道金陵味道金陵味道道</span>
+							<i class="iconfont icon-right"></i>
+						</div>
+						<span class="status right">待发货</span>
+					</div>
+					<div class="goods_main">
+						<img src="../../img/goods1.jpg" class="goods_img" />
+						<div class="content">
+							<p>四川安岳柠檬一级果产地现摘现发多种规格包邮</p>
+							<p class="model">型号<a>3斤装</a></p>
+						</div>
+						<div class="num">
+							<p class="price">¥<span>25.00</span></p>
+							<p class="buy_num">×<span>1</span></p>
+						</div>
+					</div>
+					<div class="gather clearfix">
+						<p>
+							共<a>1</a>件商品 总价: <span class="sp1">¥<a>25.00</a></span>（含运费<span>¥<a>0.00</a></span>）
+						</p>
+					</div>
+				</li>
+			</ul>
+		</section>
+		
+		<section class="section take">
+			<ul>
+				<!--订单类型 /待收货-->
+				<li>
+					<div class="goods_title">
+						<div class="shop">
+							<i class="iconfont icon-dianpu"></i>
+							<span class="shop_name">金陵味道金陵味道金陵味道道</span>
+							<i class="iconfont icon-right"></i>
+						</div>
+						<span class="status right">待收货</span>
+					</div>
+					<div class="goods_main">
+						<img src="../../img/goods1.jpg" class="goods_img" />
+						<div class="content">
+							<p>四川安岳柠檬一级果产地现摘现发多种规格包邮</p>
+							<p class="model">型号<a>3斤装</a></p>
+						</div>
+						<div class="num">
+							<p class="price">¥<span>25.00</span></p>
+							<p class="buy_num">×<span>1</span></p>
+						</div>
+					</div>
+					<div class="gather clearfix">
+						<p>
+							共<a>1</a>件商品 总价: <span class="sp1">¥<a>25.00</a></span>（含运费<span>¥<a>0.00</a></span>）
+						</p>
+						<button class="active right">确认收货</button>
+					</div>
+				</li>
+			</ul>
+		</section>
+		
+		<script src="../../js/common/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/effect.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/order/myOrder.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>

@@ -1,1 +1,196 @@
 /*我的订单*/
+body {
+	display: none;
+	margin: 0 auto;
+	background-color: #EEEEEE;
+}
+
+header {
+	width: 100%;
+	max-width: 640px;
+	height: 44px;
+	font-size: 16px;
+	line-height: 44px;
+	text-align: center;
+	background: url(../../img/logo.png)no-repeat 40px center;
+	background-size: 50px;
+	background-color: #FFFFFF;
+	z-index: 999;
+}
+
+header i.icon-back {
+	width: 38px;
+	color: #707070;
+	text-align: left;
+	margin-left: 20px;
+}
+
+header span{
+	font-size: 14px;
+	padding-right: 10px;
+}
+
+nav {
+	width: 100%;
+	background-color: #FFFFFF;
+}
+
+nav ul {
+	float: left;
+	display: inline-block;
+	width: 100%;
+}
+
+nav ul li {
+	float: left;
+	width: 25%; 
+	line-height: 40px;   
+	text-align: center;
+}
+
+nav ul li span {
+	font-size: 14px;
+    color: #737373;
+    position: relative;
+    cursor: pointer;
+}
+
+nav ul li span.active{
+	color: #222;
+}
+
+nav ul li span.active:after{
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -11px;
+    width: 100%;
+    height: 2px;
+    background-color: #404040;
+}
+
+section {
+	display: none;
+	margin-top: 10px;
+	padding-bottom: 60px;
+}
+
+section ul li {
+	margin-bottom: 10px;
+	background-color: #FFFFFF;
+}
+
+section ul li div.goods_title {
+	font-size: 14px;
+	line-height: 52px;
+	padding: 0 15px;
+	display: flex;
+	flex-direction: row;
+}
+
+section ul li div.goods_title div.shop {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+}
+
+section ul li div.goods_title div.shop span.shop_name {
+	max-width: 1.8rem;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+section ul li div.goods_title div.shop i.icon-dianpu{
+	margin-right: 6px;
+}
+
+section ul li div.goods_title div.shop i.icon-right {
+	font-size: 14px;
+	color: #999;
+	padding-left: 10px;
+}
+
+section ul li div.goods_title span.status {
+	color: #C60A1E;
+	white-space: nowrap;
+}
+
+section ul li div.goods_main {
+	display: flex;
+	flex-direction: row;
+	background-color: #F8F8F8;
+	padding: 15px;
+}
+
+section ul li div.goods_main img{
+	width: 80px;
+	height: 80px;
+	display: block;
+}
+
+section ul li div.goods_main div.content p{
+	flex: 1;
+	padding: 0 20px 0 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-height: 36px;
+}
+
+section ul li div.goods_main div.content p.model {
+	font-size: 12px;
+	color: #9A9A9A;
+	margin-top: 5px;
+}
+
+section ul li div.goods_main div.content p.model a {
+	font-size: 12px;
+	color: #9A9A9A;
+}
+
+section ul li div.goods_main div.num p{
+	text-align: right;
+}
+
+section ul li div.goods_main div.num p.buy_num {
+	font-size: 12px;
+	color: #9a9a9a;
+	
+}
+
+section ul li div.gather {
+	
+}
+
+section ul li div.gather p {
+	font-size: 12px;
+	text-align: right;
+	margin-top: 20px;
+}
+
+section ul li div.gather p span.sp1{
+	font-size: 14px;
+}
+
+section ul li div.gather {
+	padding-bottom: 20px;
+}
+
+section ul li div.gather button {
+	line-height: 30px;
+	padding: 0 12px;
+	margin: 20px 15px 0 0;
+	background-color: #FFFFFF;
+	border: 1px solid #CACACA;
+	border-radius: 2px;
+}
+
+section ul li div.gather button.active {
+	color: #C60A1E;
+	border-color: #C60A1E;
+	margin-left: -10px;
+}
