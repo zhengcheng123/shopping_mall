@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="email=no" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<title>收银台</title>
+		<link rel="icon" href="../../static/logo.ico" />
+		<link rel="stylesheet" type="text/css" href="../../static/icon_font/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/public.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/goods/pay_success.css" />
+	</head>
+
+	<body>
+		<!--头部-->
+		<header>
+			<a class="back left"><i class="iconfont icon-back"></i></a>
+			收银台
+		</header>
+		
+		<section>
+			<img src="../../img/checked.png"/>
+			<h3>支付成功</h3>
+			<p>支付金额 : ￥<a>475.65</a></p>
+			<div>
+				<span class="sp1 active"></span><span class="sp2">收藏店铺</span>
+			</div>
+			
+			<span class="check_order">查看订单</span>
+		</section>
+		
+		<script src="../../js/common/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/effect.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('span.sp1').on('click',function(){
+					if($(this).hasClass('active')) {
+						$(this).removeClass('active')
+					} else {
+						$(this).addClass('active')
+					}
+				})
+				
+				$('span.check_order').on('click',function(){
+					window.location.href = '../order/delivery_order.html'
+				})
+			})
+		</script>
+	</body>
+
+</html>

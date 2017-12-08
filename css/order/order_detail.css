@@ -1,0 +1,251 @@
+/*订单详情*/
+/*包含各种情况*/
+body {
+	display: none;
+	margin: 0 auto;
+	background-color: #EEEEEE;
+}
+
+header {
+	width: 100%;
+	max-width: 640px;
+	height: 44px;
+	font-size: 16px;
+	line-height: 44px;
+	text-align: center;
+	background: url(../../img/logo.png)no-repeat 40px center;
+	background-size: 50px;
+	background-color: #FFFFFF;
+	z-index: 999;
+}
+
+header i.icon-back {
+	width: 38px;
+	color: #707070;
+	text-align: left;
+	margin-left: 20px;
+}
+
+header span{
+	font-size: 14px;
+	padding-right: 10px;
+}
+
+div.order_status {
+	width: 100%;
+	height: 0.62rem;
+	max-height: 124px;
+	background: url(../../img/order_detail_bg.png) no-repeat;
+	background-size: 100% 100%;
+	padding: 4% 0 0 45px;
+}
+
+div.order_status p.p1 {
+	font-size: 16px;
+	color: #FFFFFF;
+}
+
+div.order_status p.p2 {
+	font-size: 12px;
+	color: #FFFFFF;
+	margin-top: 5px;
+}
+
+div.order_status p a{
+	color: #FFFFFF;
+}
+
+div.address {
+	background: #FFFFFF;
+	padding: 25px 21px;
+}
+
+div.address p.customer i.icon-dizhi {
+	color: #222222;
+	font-weight: bold;
+}
+
+div.address p.address_detail {
+	padding-left: 20px;
+	margin-top: 5px;
+}
+
+
+section {
+	margin-top: 10px;
+	/*padding-bottom: 60px;*/
+	background-color: #FFFFFF;
+}
+
+section div.goods_title {
+	font-size: 14px;
+	line-height: 52px;
+	padding: 0 15px;
+	display: flex;
+	flex-direction: row;
+}
+
+section div.goods_title div.shop {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+}
+
+section div.goods_title div.shop span.shop_name {
+	max-width: 1.8rem;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+section div.goods_title div.shop i.icon-dianpu{
+	margin-right: 6px;
+}
+
+section div.goods_title div.shop i.icon-right {
+	font-size: 14px;
+	color: #999;
+	padding-left: 10px;
+}
+
+section div.goods_title span.status {
+	color: #C60A1E;
+	white-space: nowrap;
+}
+
+section ul li {
+	display: flex;
+	flex-direction: row;
+	background-color: #F8F8F8;
+	padding: 15px;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+section ul li:nth-last-of-type(1) {
+	border: none;
+}
+
+section ul li img{
+	width: 80px;
+	height: 80px;
+	display: block;
+}
+
+section ul li div.content {
+	flex: 1;
+}
+
+section ul li div.content p{
+	padding: 0 20px 0 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-height: 36px;
+}
+
+section ul li div.content p.model {
+	font-size: 12px;
+	color: #9A9A9A;
+	margin-top: 5px;
+}
+
+section ul li div.content p.model a {
+	font-size: 12px;
+	color: #9A9A9A;
+}
+
+section ul li div.num p{
+	text-align: right;
+}
+
+section ul li div.num p.buy_num {
+	font-size: 12px;
+	color: #9a9a9a;
+}
+
+section ul li div.num button {
+	font-size: 12px;
+	border: none;
+	border: 1px solid #999;
+	background-color: #F8F8F8;
+	padding: 2px 10px;
+	border-radius: 16px;
+	margin-top: 10px;
+}
+
+section div.gather {
+	padding: 0 15px 20px;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+section div.gather a{
+	color: #707070;
+}
+
+section div.gather p {
+	float: left;
+	width: 100%;
+	font-size: 12px;
+	margin-top: 10px;
+	color: #707070;
+}
+
+section div.gather p.p3 {
+	font-size: 16px;
+	color: #222222;
+	text-align: right;
+}
+
+section div.gather p span.sp1{
+	font-size: 14px;
+}
+
+section div.gather p.p3 span,section div.gather p.p3 span a {
+	color: #C60A1E;
+	font-weight: 400;
+}
+
+section div.contact {
+	line-height: 50px;
+	text-align: center;
+}
+
+div.data_detail {
+	background: #FFFFFF;
+	margin-top: 10px;
+	padding: 15px;
+	margin-bottom: 63px;
+}
+
+div.data_detail p{
+	font-size: 12px;
+	line-height: 20px;
+	color: #9A9A9A;
+}
+
+footer {
+	position: fixed;
+	width: 100%;
+	max-width: 640px;
+	bottom: 0;
+	background: #FFFFFF;
+	padding: 10px 15px;
+	border-top: 1px solid #EEE;
+}
+
+footer button {
+	line-height: 30px;
+	padding: 0 12px;
+	background-color: #FFFFFF;
+	border: 1px solid #CACACA;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+footer button.active {
+	color: #C60A1E;
+	border-color: #C60A1E;
+	margin-left: 10px;
+}

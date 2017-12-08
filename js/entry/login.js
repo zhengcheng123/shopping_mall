@@ -123,7 +123,7 @@ $(document).ready(function() {
 				pointOut('密码为6-16位字母数字组合！')
 			}else{
 				pointOut('登录成功！')
-				window.open('../../view/order/orderView.html')
+				window.location.href = '../../view/order/orderCentrality.html'
 			}
 		} else {
 			pointOut('请完善信息！')
@@ -141,7 +141,7 @@ $(document).ready(function() {
 				pointOut('请输入6位验证码！')
 			}else{
 				pointOut('登录成功！')
-				window.open('../../view/order/orderView.html')
+				window.location.href = '../../view/order/orderCentrality.html'
 			}
 		} else {
 			if($('.protocol label').attr('class')){

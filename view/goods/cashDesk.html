@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="email=no" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<title>收银台</title>
+		<link rel="icon" href="../../static/logo.ico" />
+		<link rel="stylesheet" type="text/css" href="../../static/icon_font/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/public.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/goods/cashDesk.css" />
+	</head>
+
+	<body>
+		<!--头部-->
+		<header>
+			<a class="back left"><i class="iconfont icon-back"></i></a>
+			收银台
+		</header>
+		<section>
+			<span>支付金额</span>
+			<h5>¥ <a>66.66</a></h5>
+			<p>商品名称 : 一只大鸡腿一只大鸡腿一只大鸡腿</p>
+		</section>
+		
+		<div class="pay_chose">
+			<ul>
+				<li class="weixin_pay">
+					<i class="iconfont icon-weixinzhifu"></i>
+					<span class="active right"></span>
+				</li>
+				<li class="ali_pay">
+					<i class="iconfont icon-zhifubao"></i>
+					<span class="right"></span>
+				</li>
+			</ul>
+		</div>
+		
+		<footer>
+			<button>立即支付</button>
+		</footer>
+		
+		<script src="../../js/common/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/effect.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('ul li').on('click',function(){
+				$(this).find('span').addClass('active').parents('li').siblings('li').find('span').removeClass('active')	
+			})
+			
+			$('button').on('click',function(){
+				window.location.href = 'pay_success.html'
+			})
+		</script>
+	</body>
+
+</html>

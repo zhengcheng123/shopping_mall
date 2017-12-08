@@ -122,6 +122,11 @@ section ul li div.goods_main {
 	flex-direction: row;
 	background-color: #F8F8F8;
 	padding: 15px;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+section ul li div.goods_main:nth-last-of-type(2) {
+	border: none;
 }
 
 section ul li div.goods_main img{
@@ -130,8 +135,11 @@ section ul li div.goods_main img{
 	display: block;
 }
 
-section ul li div.goods_main div.content p{
+section ul li div.goods_main div.content {
 	flex: 1;
+}
+
+section ul li div.goods_main div.content p{
 	padding: 0 20px 0 10px;
     display: -webkit-box;
     -webkit-line-clamp: 2;

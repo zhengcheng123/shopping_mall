@@ -1,0 +1,117 @@
+/*收银台-确认支付css*/
+
+body {
+	display: none;
+	max-width: 100%;
+	margin: 0 auto;
+	background-color: #EEEEEE;
+}
+
+header {
+	/*position: fixed;
+	top: 0;*/
+	width: 100%;
+	height: 44px;
+	font-size: 16px;
+	line-height: 44px;
+	text-align: center;
+	background: url(../../img/logo.png)no-repeat 45px center;
+	background-size: 50px;
+	background-color: #f7f7f7;
+	z-index: 999;
+	padding-right: 36px;
+	border-bottom: 1px solid #E5E5E5;
+}
+
+header a.back {
+	font-size: 14px;
+	color: #888;
+	padding-left: 20px;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding: 20px 15% 30px;
+	background-color: #FFFFFF;
+}
+
+section span {
+	font-size: 16px;
+	color: #404040;
+}
+
+section h5 {
+	font-size: 30px;
+	color: #404040;
+	font-weight: 500;
+}
+
+section p {
+	font-size: 16px;
+	color: #9a9a9a;
+	text-align: center;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+div.pay_chose {
+	margin-top: 20px;
+	background-color: #FFFFFF;
+}
+
+div.pay_chose ul li {
+	width: 100%;
+	height: 0.6rem;
+	line-height: 0.6rem;
+	border-bottom: 1px solid rgba(0, 0, 0, .1);
+	padding-left: 20px;
+}
+
+div.pay_chose ul li:nth-last-of-type(1) {
+	border: none;
+}
+
+div.pay_chose ul li.weixin_pay i.icon-weixinzhifu {
+	font-size: 0.2rem;
+	color: #3BAF36;
+}
+
+div.pay_chose ul li.ali_pay i.icon-zhifubao {
+	font-size: 0.2rem;
+	color: #00A8F2;
+}
+
+div.pay_chose ul li span {
+	width: 0.18rem;
+	height: 0.18rem;
+	border: 1px solid #CDCDCD;
+	border-radius: 0.5rem;
+	margin: 0.2rem 20px 0;
+}
+
+div.pay_chose ul li span.active {
+	width: 0.18rem;
+	height: 0.18rem;
+	border: 1px solid #CDCDCD;
+	border-radius: 0.5rem;
+	margin: 0.2rem 20px 0;
+	background: url(../../img/checked.png) no-repeat;
+	background-size: 0.18rem;
+}
+
+footer {
+	padding: 20px 10px;
+}
+
+footer button {
+	width: 100%;
+	font-size: 0.14rem;
+	color: #FFFFFF;
+	line-height: 0.4rem;
+	border: none;
+	background-color: #09bb07;
+	border-radius: 3px;
+}

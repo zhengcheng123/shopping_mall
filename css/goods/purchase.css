@@ -1,0 +1,208 @@
+/*确认购买页面css*/
+
+body {
+	/*display: none;*/
+	margin: 0 auto;
+	background-color: #EEEEEE;
+}
+
+header {
+	/*position: fixed;
+	top: 0;*/
+	width: 100%;
+	max-width: 640px;
+	height: 44px;
+	font-size: 16px;
+	line-height: 44px;
+	text-align: center;
+	background: url(../../img/logo.png)no-repeat 45px center;
+	background-size: 50px;
+	background-color: #FFFFFF;
+	z-index: 999;
+	padding-right: 36px;
+	border-bottom: 1px solid #E5E5E5;
+}
+
+header a.back {
+	font-size: 14px;
+	color: #888;
+	padding-left: 20px;
+}
+
+div.address {
+	background: url(../../img/right.png) no-repeat right 10px center;
+	background-size: 20px;
+	background-color: #FFFFFF;
+	padding: 15px 40px 15px 15px;
+	border: 2px solid #CCCCCC;
+	border-image: url(../../img/border-img.png) 0 0 5 0 round;
+}
+
+div.address p i.icon-dizhi {
+	font-size: 18px;
+	color: #333;
+	font-weight: 600;
+	margin-right: 10px;
+}
+
+div.address p.area {
+	padding-left: 30px;
+	margin: 5px 0;
+}
+
+div.address p.area span.sp1 {
+	color: #F99E00;
+}
+
+
+/*选择购买的商品*/
+
+section {
+	margin-top: 12px;
+	background: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+}
+
+section div.title {
+	padding: 15px 20px;
+}
+
+section div.content {
+	display: flex;
+	flex-direction: row;
+	background-color: #F8F8F8;
+	padding: 15px;
+	border-bottom: 1px solid #E5E5E5;
+}
+
+section div.content:nth-last-of-type(2) {
+	border: none;
+}
+
+section div.content img {
+	display: block;
+	width: 80px;
+	height: 80px;
+}
+
+section div.content p.info {
+	flex: 1;
+	height: 36px;
+	padding: 0 40px 0 20px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+
+section div.content div p {
+	text-align: right;
+}
+
+section div.content div p.goods_num,
+section div.content div p.goods_num a {
+	font-size: 12px;
+	color: #9A9A9A;
+}
+
+section p.trans_price {
+	padding: 20px 15px;
+	border-bottom: 1px solid #E5E5E5;
+}
+
+section p.trans_price span.sp1 {
+	font-size: 12px;
+	color: #CACACA;
+}
+
+section p.trans_price i.icon-zhuyi {
+	margin: 0 3px;
+}
+
+section div.message label {
+	float: left;
+	width: 16%;
+	height: 40px;
+	line-height: 40px;
+	text-align: left;
+	padding-left: 15px;
+	white-space: nowrap;
+}
+
+section div.message input {
+	float: left;
+	width: 70%;
+	height: 40px;
+	border: none;
+	font-size: 14px;
+}
+
+section div.message input::-webkit-input-placeholder {
+	/* WebKit browsers */
+	font-size: 12px;
+}
+
+section p.shop_total {
+	line-height: 50px;
+	text-align: right;
+	border-top: 1px solid #E5E5E5;
+	padding-right: 15px;
+}
+
+section p.shop_total span,
+section p.shop_total a.shop_price {
+	color: #C60A1E;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	max-width: 640px;
+	display: flex;
+	flex-direction: row;
+	border-top: 1px solid #e8e8e8;
+	background: #FFFFFF;
+}
+
+footer div.compute {
+	flex: 1;
+}
+
+footer div.compute p {
+	text-align: right;
+	margin-top: 3px;
+}
+
+footer div.compute p.p1 {
+	font-size: 14px;
+}
+
+footer div.compute p.p1 span,
+footer div.compute p.p1 a {
+	color: #d93229;
+}
+
+footer div.compute p.p2 {
+	font-size: 12px;
+	color: #737373;
+}
+
+footer span.btn {
+	height: 50px;
+	line-height: 50px;
+	background-color: #c60a1e;
+	margin-left: 10px;
+}
+
+footer span.btn a {
+	display: block;
+	font-size: 16px;
+	color: #FFFFFF;
+	padding: 0 25px;
+}
+
+body:nth-last-child(1) {
+	margin-bottom: 60px;
+}
