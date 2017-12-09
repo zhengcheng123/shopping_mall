@@ -30,8 +30,6 @@ header a.back {
 }
 
 section {
-	display: flex;
-	flex-direction: column;
 	background: #FFFFFF;
 	text-align: center;
 	padding: 60px 0 20px;
@@ -44,17 +42,20 @@ section img{
 }
 
 section h3 {
+	text-align: center;
 	line-height: 30px;
 }
 
 section p{
+	text-align: center;
 	font-size: 18px;
 	margin: 20px 0;
 }
 
 section div {
+	width: 100%;
 	line-height: 40px;
-	/*margin: 10px 0;*/
+
 }
 
 section div span.sp1 {
@@ -62,16 +63,15 @@ section div span.sp1 {
 	display: block;
 	width: 20px;
 	height: 20px;
-	border-radius: 50px;
 	margin:10px 0 0 calc(50% - 45px);
-	background: url(../../img/star_off.png)no-repeat;
-	background-size: 100%;
+	background: url(../../img/star_off.png)no-repeat center center;
+	background-size: 20px 20px;
 	cursor: pointer;
 }
 
 section div span.sp1.active {
-	background: url(../../img/star_on.png)no-repeat;
-	background-size: 18px;
+	background: url(../../img/star_on.png) no-repeat center center;
+	background-size: 20px 20px;
 }
 
 section div span.sp2 {
@@ -79,8 +79,10 @@ section div span.sp2 {
 	margin-left: 5px;
 }
 
-section span.check_order {
+section button.check_order {
+	display: block;
 	width: 100px;
+	height: 30px;
 	color: #666666;
 	line-height: 30px;
 	border: 1px solid #EEEEEE;
@@ -88,4 +90,5 @@ section span.check_order {
 	background: #FFFFFF;
 	margin: 50px auto 0;
 	cursor: pointer;
+	padding: 0;
 }

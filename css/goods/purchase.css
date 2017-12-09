@@ -88,7 +88,8 @@ section div.content img {
 
 section div.content p.info {
 	flex: 1;
-	height: 36px;
+	line-height: 18px;
+	height: 33px;
 	padding: 0 40px 0 20px;
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
@@ -152,7 +153,7 @@ section p.shop_total {
 
 section p.shop_total span,
 section p.shop_total a.shop_price {
-	color: #C60A1E;
+	color: #FF1B4B;
 }
 
 footer {
@@ -168,6 +169,7 @@ footer {
 
 footer div.compute {
 	flex: 1;
+	padding-top: 5px;
 }
 
 footer div.compute p {

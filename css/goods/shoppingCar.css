@@ -121,6 +121,10 @@ section div.shop ul li {
 	border-bottom: 1px solid #ddd;
 }
 
+section div.shop ul li:last-child {
+	border: none;
+}
+
 section div.shop ul li div.content {
 	flex: 1;
 	display: flex;

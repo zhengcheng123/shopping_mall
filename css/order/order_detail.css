@@ -109,7 +109,7 @@ section div.goods_title div.shop i.icon-right {
 }
 
 section div.goods_title span.status {
-	color: #C60A1E;
+	color: #FF1B4B;
 	white-space: nowrap;
 }
 
@@ -203,7 +203,7 @@ section div.gather p span.sp1{
 }
 
 section div.gather p.p3 span,section div.gather p.p3 span a {
-	color: #C60A1E;
+	color: #FF1B4B;
 	font-weight: 400;
 }
 
@@ -245,7 +245,7 @@ footer button {
 }
 
 footer button.active {
-	color: #C60A1E;
-	border-color: #C60A1E;
+	color: #FF1B4B;
+	border-color: #FF1B4B;
 	margin-left: 10px;
 }

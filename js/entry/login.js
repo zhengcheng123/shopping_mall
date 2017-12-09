@@ -173,6 +173,22 @@ $(document).ready(function() {
 							clearInterval(time)
 						}
 					}, 1000)
+					$.ajax({
+						type:"post",
+						url:"",
+						data: {
+							num:phoneNum
+						},
+						dataType: 'json'
+					}).done(function(res) {
+						if(res.resule === 1) {
+//							succes
+						} else {
+							pointOut('获取验证码失败！')
+						}
+					}).fail(function() {
+						pointOut('服务器错误！')
+					})
 				}
 			} else {
 				pointOut('请输入手机号！')

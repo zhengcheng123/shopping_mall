@@ -113,7 +113,7 @@ section ul li div.goods_title div.shop i.icon-right {
 }
 
 section ul li div.goods_title span.status {
-	color: #C60A1E;
+	color: #FF1B4B;
 	white-space: nowrap;
 }
 
@@ -198,7 +198,7 @@ section ul li div.gather button {
 }
 
 section ul li div.gather button.active {
-	color: #C60A1E;
-	border-color: #C60A1E;
+	color: #FF1B4B;
+	border-color: #FF1B4B;
 	margin-left: -10px;
 }
