@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="email=no" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<title>申请售后</title>
+		<link rel="icon" href="../../static/logo.ico" />
+		<link rel="stylesheet" type="text/css" href="../../static/icon_font/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/public.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/order/refund.css" />
+	</head>
+
+	<body>
+		<!--<div class="content">-->
+			<header>
+				<i class="iconfont icon-back left"></i>申请售后
+			</header>
+
+			<div class="goods_detail">
+				<img src="../../img/goods1.jpg" />
+				<div class="goods_content">
+					<p class="goods_name">四川安岳柠檬一级果产地现摘现发多种规格包邮</p>
+					<p class="model">五斤装</p>
+				</div>
+				<div class="total">
+					<p class="price">¥<span>25.00</span></p>
+					<p class="buy_num">×<span>1</span></p>
+				</div>
+			</div>
+
+			<section>
+				<ul>
+					<li class="reason">
+						<label for="">退款原因</label>
+						<span>请选择</span>
+					</li>
+					<li class="money">
+						<label for="">退款金额 : </label><s>¥</s>
+						<input type="" name="" id="" value="25.00" maxlength="6" />
+						<p>最多 ¥ <span class="max_price">25.00</span> , 含发货邮费 ¥ <span>0.00</span></p>
+					</li>
+					<li class="explain">
+						<label for="">退款说明 : </label>
+						<input type="" name="" id="" value="" placeholder="选填" maxlength="200" />
+					</li>
+					<li class="voucher clearfix">
+						<p>上传凭证</p>
+						<div class="photo_upload">
+							<input type="file" name="file" id="file" value="" multiple="" accept="image/*" onchange="imgChange('voucher','photo_upload');" />
+							<p>上传凭证</p>
+							<p>(最多3张)</p>
+						</div>
+					</li>
+				</ul>
+			</section>
+		<!--</div>-->
+
+		<footer>
+			提交
+		</footer>
+		
+		<div class="chose_reason">
+			<div class="reason_list">
+				<h3>退款原因</h3>
+				<ul>
+					<li>多拍/错拍/不喜欢/不想要<span class="right"></span></li>
+					<li>假货<span class="right"></span></li>
+					<li>卖家漏发、错发<span class="right"></span></li>
+					<li>款式颜色问题退换货<span class="right"></span></li>
+					<li>商品质量问题<span class="right"></span></li>
+					<li>其他原因<span class="right"></span></li>
+				</ul>
+				<span class="close_list">关闭</span>
+			</div>
+			
+		</div>
+		
+		<script src="../../js/common/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/effect.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/order/refund.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>
