@@ -1,0 +1,191 @@
+/*新增地址css*/
+
+body {
+	display: none;
+	margin: 0 auto;
+	background-color: #EEEEEE;
+}
+
+header {
+	width: 100%;
+	max-width: 640px;
+	height: 44px;
+	font-size: 16px;
+	line-height: 44px;
+	text-align: center;
+	background: url(../../img/logo.png)no-repeat 40px center;
+	background-size: 50px;
+	background-color: #FFFFFF;
+	z-index: 999;
+	padding-right: 38px;
+}
+
+header i.icon-back {
+	color: #707070;
+	text-align: left;
+	padding-left: 22px;
+}
+
+div.main {
+	margin-top: 10px;
+	background-color: #FFFFFF;
+	padding: 0 20px;
+}
+
+div.main ul li {
+	display: flex;
+	flex-direction: row;
+	padding: 15px 0;
+	border-bottom: 1px solid #DDDDDD;
+}
+
+div.main ul li label {
+	width: 70px;
+}
+
+div.main ul li input,
+textarea {
+	flex: 1;
+	border: none;
+}
+
+div.btn {
+	padding: 20px 10px 0;
+}
+
+div.btn button {
+	width: 100%;
+	height: 44px;
+	line-height: 44px;
+	border: none;
+	border-radius: 4px;
+	background-color: #C60A1E;
+	font-size: 16px;
+	color: #FFFFFF;
+}
+
+
+/*switch style*/
+
+.switch-box {
+	display: flex;
+	flex-direction: row;
+	padding: 20px 20px 20px 0;
+}
+
+.switch-box .switch-label {
+	flex: 1;
+}
+
+.switch-box .switch-box-slider {
+	position: relative;
+	display: inline-block;
+	height: 8px;
+	width: 32px;
+	background: #d5d5d5;
+	border-radius: 8px;
+	cursor: pointer;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+.switch-box .switch-box-slider:after {
+	position: absolute;
+	left: -8px;
+	top: -8px;
+	display: block;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background: #eeeeee;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+	content: '';
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+.switch-box .switch-box-input {
+	display: none;
+}
+
+.switch-box .switch-box-input:checked~.switch-box-slider:after {
+	left: 16px;
+}
+
+.switch-box.is-success .switch-box-input:checked:not(:disabled)~.switch-box-slider {
+	background: #54d98c;
+}
+
+.switch-box.is-success .switch-box-input:checked:not(:disabled)~.switch-box-slider:after {
+	background: #2ecc71;
+}
+
+
+/*选择地区弹层*/
+.express-area-box {
+	position: fixed;
+	bottom: -100%;
+	z-index: 15;
+	width: 100%;
+	max-width: 640px;
+	background-color: #fff;
+	color: #4d525d;
+}
+
+.express-area-box div.top {
+	position: relative;
+	border-top: 1px solid #e2e2e2;
+	border-bottom: 1px solid #e2e2e2;
+}
+
+.express-area-box div.top h3 {
+	margin: 10px;
+	text-align: center;
+	font-size: 16px;
+}
+
+.express-area-box div.top .back,
+.express-area-box div.top .close {
+	position: absolute;
+	top: 0;
+	width: 20px;
+	height: 41px;
+}
+
+.express-area-box div.top .back {
+	display: none;
+	left: 0;
+	background: url(../../img/left.png) no-repeat center;
+	background-size: 16px;
+}
+
+.express-area-box div.top .close {
+	right: 0;
+	background: url(../../img/close_area.png) no-repeat center;
+	background-size: 16px;
+}
+
+.express-area-box article {
+	height: 250px;
+	overflow-y: scroll;
+}
+
+.area-list li {
+	padding: 10px;
+	border-bottom: 1px solid #e2e2e2;
+	text-align: justify;
+	font-size: 14px;
+}
+
+/*遮罩层*/
+
+.mask {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 12;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .5);
+}

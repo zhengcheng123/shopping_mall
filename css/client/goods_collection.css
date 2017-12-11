@@ -1,0 +1,191 @@
+/*收藏商品css*/
+
+body {
+	display: none;
+	margin: 0 auto;
+	background-color: #EEEEEE;
+}
+
+header {
+	width: 100%;
+	max-width: 640px;
+	height: 44px;
+	font-size: 16px;
+	line-height: 44px;
+	text-align: center;
+	background: url(../../img/logo.png)no-repeat 40px center;
+	background-size: 50px;
+	background-color: #FFFFFF;
+	z-index: 999;
+}
+
+header i.icon-back {
+	color: #707070;
+	text-align: left;
+	padding: 0 5px 0 22px;
+}
+
+header span {
+	font-size: 14px;
+	padding-right: 15px;
+}
+
+input[type = 'checkbox'] {
+	display: none;
+}
+
+label{
+	position: relative;
+    display: inline-block;
+    z-index: 9;
+	background: url(../../img/no_check.png) no-repeat;
+	background-size: 20px;
+    margin: 0 20px 0 0;
+    border-radius: 1px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+label.mark{
+	background: url(../../img/check.png) no-repeat;
+	background-size: 20px;
+	
+}
+
+.chk {
+	display: none;
+}
+
+section {
+	background-color: #FFFFFF;
+	margin-top: 10px;
+	padding: 0 15px;
+}
+
+section ul li {
+	display: flex;
+	flex-direction: row;
+	border-bottom: 1px solid #EEEEEE;
+	padding: 20px 0;
+}
+
+section ul li .chk {
+	text-align: left;
+	line-height: 80px;
+}
+
+section ul li img.goods_img {
+	width: 80px;
+	height: 80px;
+}
+
+section ul li div.content {
+	flex: 1;
+	margin-left: 10px;
+}
+
+section ul li div.content p.name {
+	margin-bottom: 5px;
+}
+
+section ul li div.content p.price,
+section ul li div.content p.price a {
+	color: #d93229;
+}
+
+footer {
+	visibility: hidden;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	max-width: 640px;
+	height: 50px;
+	border-top: 1px solid #ddd;
+	background-color: rgba(247, 247, 247, .96);
+	display: flex;
+	flex-direction: row;
+	z-index: 999;
+}
+
+footer div.all_check {
+	flex: 1;
+	margin-top: 8px;
+}
+
+footer div.all_check label {
+	margin-left: 18px;
+}
+
+footer div.all_check p {
+	color: #666666;
+	font-size: 12px;
+	line-height: 12px;
+	padding-left: 16px;
+}
+
+footer div.settle_accounts {
+	display: flex;
+	flex-direction: row;
+}
+
+footer div.settle_accounts p.total {
+	font-size: 12px;
+	color: #404040;
+	line-height: 50px;
+	margin-right: 15px;
+}
+
+footer div.settle_accounts p.total a {
+	font-size: 14px;
+	color: #c60a1e;
+}
+
+footer div.settle_accounts span.to_delete {
+	width: 110px;
+	font-size: 16px;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 50px;
+	background-image: linear-gradient(to bottom, #cacaca, #cacaca);
+}
+
+footer div.settle_accounts span.to_delete.btn_sty {
+	width: 110px;
+	font-size: 16px;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 50px;
+	background-image: linear-gradient(to bottom, #f6402b, #da071c);
+}
+
+footer div.settle_accounts span.to_pay a {
+	color: #FFFFFF;
+}
+
+footer div.all_chose_delete {
+	display: none;
+}
+
+footer div.all_chose_delete span.to_delete {
+	display: block;
+	width: 110px;
+	height: 100%;
+	font-size: 16px;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 50px;
+	background-image: linear-gradient(to bottom, #cacaca, #cacaca);
+}
+
+footer div.all_chose_delete span.to_delete.btn_sty {
+	display: block;
+	width: 110px;
+	height: 100%;
+	font-size: 16px;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 50px;
+	background-image: linear-gradient(to bottom, #f6402b, #da071c);
+}
+

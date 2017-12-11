@@ -59,7 +59,7 @@ fieldset {
 	zoom: 1;
 }
 
-button,input{
+button,input,textarea{
 	outline: none;
 }
 
@@ -94,6 +94,11 @@ span.right-arrow {
     left: 50%;
     transform: translate(-50%);
     z-index: 9999999999999999999999999999;
+}
+
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {
+	font-size: 14px;
+	color: #9E9E9E;
 }
 
 　　

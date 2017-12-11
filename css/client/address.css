@@ -1,0 +1,94 @@
+/*收货地址css*/
+body {
+	display: none;
+	margin: 0 auto;
+	background-color: #EEEEEE;
+}
+
+header {
+	width: 100%;
+	max-width: 640px;
+	height: 44px;
+	font-size: 16px;
+	line-height: 44px;
+	text-align: center;
+	background: url(../../img/logo.png)no-repeat 40px center;
+	background-size: 50px;
+	background-color: #FFFFFF;
+	z-index: 999;
+	padding-right: 38px;
+}
+
+header i.icon-back {
+	color: #707070;
+	text-align: left;
+	padding-left: 22px;
+}
+
+section ul li {
+	background-color: #FFFFFF;
+	margin-top: 10px;
+	padding: 20px 0;
+	/*font-size: 14px;*/
+}
+
+section ul li:last-child {
+	margin-bottom: 68px;
+}
+
+section ul li i.iconfont {
+	font-size: 16px;
+	color: #707070;
+}
+
+section ul li i.iconfont.icon-shanchu1 {
+	font-size: 20px;
+
+}
+
+section ul li div.content {
+	padding: 0 20px 10px;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+section ul li div.content p.area {
+	color: #707070;
+	margin-top: 5px;
+}
+
+section ul li div.operation {
+	padding: 20px 20px 0;
+}
+
+section ul li div.operation span.sp1 {
+	display: block;
+	width: 1px;
+	height: 36px;
+	background: #CCCCCC;
+	margin: -8px 16px 0;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 58px;
+	line-height: 58px;
+	max-width: 640px;
+	font-size:16px;
+	text-align: center;
+	background-color: #FFFFFF;
+	border-top: 1px solid #e8e8e8;
+}
+
+footer i.iconfont {
+	font-size: 22px;
+	height: 24px;
+	color: #FF1B4B;
+}
+
+footer span {
+	padding: 3px 30px;
+	background: url(../../img/add_address.png) no-repeat left center;
+	background-size: 24px;
+}

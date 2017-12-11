@@ -1,0 +1,87 @@
+/*个人信息css*/
+body {
+	display: none;
+	margin: 0 auto;
+	background-color: #EEEEEE;
+}
+
+header {
+	width: 100%;
+	max-width: 640px;
+	height: 44px;
+	font-size: 16px;
+	line-height: 44px;
+	text-align: center;
+	background: url(../../img/logo.png)no-repeat 40px center;
+	background-size: 50px;
+	background-color: #FFFFFF;
+	z-index: 999;
+	padding-right: 38px;
+}
+
+header i.icon-back {
+	color: #707070;
+	text-align: left;
+	padding-left: 22px;
+}
+
+section {
+	margin-top: 10px;
+	background: #FFFFFF;
+	padding: 0px 15px;
+	font-size: 16px;
+}
+
+section a{
+	font-size: 14px;
+}
+
+section div.head_img {
+	display: flex;
+	flex-direction: row;
+	border-bottom: 1px solid #EEEEEE;
+	padding: 15px 30px 15px 0;
+	background: url(../../img/right.png) no-repeat right center;
+	background-size: 18px;
+}
+
+section div.head_img span {
+	flex: 1;
+	line-height: 50px;
+}
+
+section div.head_img img{
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+
+}
+
+section div.head_img i.iconfont {
+	color: #9A9A9A;
+	line-height: 50px;
+	padding-left: 15px;
+}
+
+section div.name {
+	border-bottom: 1px solid #EEEEEE;
+	padding: 15px 30px 15px 0;
+	background: url(../../img/right.png) no-repeat right center;
+	background-size: 18px;
+}
+
+section div.phone_num {
+	padding: 15px 0;
+}
+
+footer {
+	margin: 20px 20px 0;
+    font-size: 16px;
+    color: #222;
+    text-align: center;
+    line-height: 44px;
+    background: #FAFAFA;
+    border: 1px solid #cacaca;
+    border-radius: 4px;
+    height: 44px;
+}

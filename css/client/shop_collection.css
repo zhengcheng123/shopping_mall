@@ -1,0 +1,81 @@
+/*收藏店铺css*/
+
+body {
+	display: none;
+	margin: 0 auto;
+	background-color: #EEEEEE;
+}
+
+header {
+	width: 100%;
+	max-width: 640px;
+	height: 44px;
+	font-size: 16px;
+	line-height: 44px;
+	text-align: center;
+	background: url(../../img/logo.png)no-repeat 40px center;
+	background-size: 50px;
+	background-color: #FFFFFF;
+	z-index: 999;
+}
+
+header i.icon-back {
+	color: #707070;
+	text-align: left;
+	padding: 0 5px 0 22px;
+}
+
+section {
+	background-color: #FFFFFF;
+	margin-top: 10px;
+	padding: 0 15px;
+}
+
+section ul li {
+	display: flex;
+	flex-direction: row;
+	border-bottom: 1px solid #EEEEEE;
+	padding: 20px 0;
+}
+
+section ul li img.shop_logo {
+	width: 40px;
+	height: 40px;
+	border-radius: 50px;
+}
+
+section ul li div.content {
+	flex: 1;
+	margin-left: 10px;
+}
+
+section ul li div.content p.name {
+	font-size: 16px;
+}
+
+section ul li div.content p.num,section ul li div.content p.num a{
+	font-size: 12px;
+	color: #999999;
+	margin: 5px 0 15px;
+}
+
+section ul li div.content p.goods img {
+	float: left;
+	width: 46px;
+	height: 46px;
+	margin-right: 6px;
+}
+
+section ul li div.new p.p1 i.icon-aixin{
+	color: #F1462F;
+}
+
+section ul li div.new p {
+	font-size: 12px;
+	color: #9A9A9A;
+	text-align: right;
+}
+
+section ul li div.new p.p2 {
+	margin-top: 45px;
+}

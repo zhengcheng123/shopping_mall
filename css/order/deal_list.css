@@ -1,0 +1,91 @@
+/*个人信息css*/
+body {
+	display: none;
+	margin: 0 auto;
+	background-color: #EEEEEE;
+}
+
+header {
+	width: 100%;
+	max-width: 640px;
+	height: 44px;
+	font-size: 16px;
+	line-height: 44px;
+	text-align: center;
+	background: url(../../img/logo.png)no-repeat 40px center;
+	background-size: 50px;
+	background-color: #FFFFFF;
+	z-index: 999;
+	padding-right: 38px;
+}
+
+header i.icon-back {
+	color: #707070;
+	text-align: left;
+	padding-left: 22px;
+}
+
+section {
+	margin-top: 10px;
+}
+
+section ul li {
+	float: left;
+	width: 100%;
+	background-color: #FFFFFF;
+	margin-bottom: 10px;
+}
+
+section ul li div.title {
+	padding: 15px;
+	border: 1px solid #EEEEEE;
+}
+
+section ul li div.title i.icon-right {
+	color: #9E9E9E;
+	font-size: 12px;
+}
+
+section ul li div.title a{
+	color: #FF1B4B;
+}
+
+section ul li div.content:nth-last-of-type(1) {
+	border: none;
+}
+
+section ul li div.content {
+	display: flex;
+	flex-direction: row;
+	padding: 20px 15px;
+	background-color: #F8F8F8;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+section ul li div.content div {
+	flex: 1;
+	padding-left: 10px;
+}
+
+section ul li div.content img{
+	display: block;
+	width: 80px;
+	height: 80px;
+}
+
+section ul li div.content div p.model {
+	font-size: 12px;
+	color: #9A9A9A;
+}
+
+section ul li p.total {
+	font-size: 14px;
+	line-height: 45px;
+	text-align: right;
+	padding: 10px 15px 0;
+}
+
+section ul li p.total span,section ul li p.total a{
+	font-size: 16px;
+	color: #FF1B4B;
+}

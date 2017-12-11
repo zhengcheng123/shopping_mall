@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="email=no" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<title>新增收货地址</title>
+		<link rel="icon" href="../../static/logo.ico" />
+		<link rel="stylesheet" type="text/css" href="../../static/icon_font/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/public.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/client/add_address.css" />
+	</head>
+
+	<body>
+		<header>
+			<i class="iconfont icon-back left"></i>新增收货地址
+		</header>
+
+		<section>
+			<div class="main">
+				<ul>
+					<li>
+						<label for="">收货人</label>
+						<input type="" name="" id="" value="" placeholder="请输入收货人姓名" />
+					</li>
+					<li>
+						<label for="">手机号码</label>
+						<input type="" name="" id="" value="" maxlength="11" placeholder="请输入收货人手机号" />
+					</li>
+					<li class="chose_area">
+						<label for="">所在地区</label>
+						<input type="" name="" id="expressArea" value="" placeholder="-请选择-" disabled />
+					</li>
+					<li>
+						<label for="">详细地址</label>
+						<textarea name="" rows="" cols="" placeholder="请输入街道地址"></textarea>
+					</li>
+				</ul>
+				<div class="switch-box is-success">
+					<label class="switch-label">设为默认地址</label>
+					<div>
+						<input id="success" class="switch-box-input" type="checkbox" checked />
+						<label for="success" class="switch-box-slider"></label>
+					</div>
+				</div>
+			</div>
+			<div class="btn">
+				<button>保存并使用</button>
+			</div>
+		</section>
+
+		<!--选择地区弹层-->
+		<section id="areaLayer" class="express-area-box">
+			<div class="top">
+				<h3>选择地区</h3>
+				<a id="backUp" class="back" href="javascript:void(0)" title="返回"></a>
+				<a id="closeArea" class="close" href="javascript:void(0)" title="关闭"></a>
+			</div>
+			<article id="areaBox">
+				<ul id="areaList" class="area-list"></ul>
+			</article>
+		</section>
+		<!--遮罩层-->
+        <div id="areaMask" class="mask"></div>
+        
+
+		<script src="../../js/common/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/effect.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="../../js/client/address.js" type="text/javascript" charset="utf-8"></script>-->
+		<script src="../../plugin/jquery.area.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>
