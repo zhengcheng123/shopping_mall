@@ -7,8 +7,6 @@ body {
 }
 
 header {
-	/*position: fixed;
-	top: 0;*/
 	width: 100%;
 	max-width: 640px;
 	height: 44px;
@@ -207,4 +205,122 @@ footer span.btn a {
 
 body:nth-last-child(1) {
 	margin-bottom: 60px;
+}
+
+/*选择收货地址*/
+div.address_list {
+	position: fixed;
+	bottom: -100%;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 640px;
+	height: 100%;
+	background: #FFFFFF;
+	overflow-x: hidden;
+	overflow-y: auto;
+	transition: 0.5s;
+}
+
+div.address_list.active {
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 640px;
+	height: 100%;
+	background: #FFFFFF;
+	
+	transition: 0.5s;
+}
+
+div.address_list div.top {
+	width: 100%;
+	max-width: 640px;
+	height: 44px;
+	font-size: 16px;
+	line-height: 44px;
+	text-align: center;
+	background: url(../../img/logo.png)no-repeat 45px center;
+	background-size: 50px;
+	background-color: #f7f7f7;
+	z-index: 999;
+	padding-right: 36px;
+}
+
+div.address_list div.top a.back {
+	font-size: 14px;
+	color: #888;
+	padding-left: 20px;
+}
+
+div.address_list div.list_show {
+	flex: 1;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+div.address_list div.list_show ul li {
+	border-bottom: 1px solid #E5E5E5;
+	padding: 20px 15px;
+	display: flex;
+	flex-direction: row;
+	font-size: 14px;
+	align-items: center;
+}
+
+div.address_list div.list_show ul li span.check {
+	display: block;
+	width: 18px;
+	height: 18px;
+	border: 1px solid #C9C9C9;
+	border-radius: 50px;	
+}
+
+div.address_list div.list_show ul li span.active {
+	border: none;
+	background: url(../../img/check.png) no-repeat;
+	background-size: 18px;
+}
+
+div.address_list div.list_show ul li div.content {
+	flex: 1;
+	padding: 0 10px;
+}
+
+div.address_list div.list_show ul li div.content p.p2 {
+	margin-top: 3px;
+}
+
+div.address_list div.list_show ul li div.content p.p2 span{
+	color: #F99E00;
+}
+
+div.address_list div.list_show ul li div.content p.p2 span.active {
+	background: url(../../img/check.png) no-repeat;
+	background-size: 18px;
+}
+
+div.address_list div.list_show ul li div.content p.p2 a{
+	color: #888888;
+}
+
+div.address_list div.list_show ul li span.edit {
+	display: block;
+	height: 100%;
+}
+
+div.address_list span.add {
+	width: 100%;
+	max-width: 640px;
+	font-size: 16px;
+	line-height: 50px;
+	text-align: center;
+	background-color: #F7F7F7;
+	border-top: 1px solid #E5E5E5;
+}
+
+div.address_list span.add a {
+	display: block;
 }

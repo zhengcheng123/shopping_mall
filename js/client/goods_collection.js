@@ -4,20 +4,19 @@ $(document).ready(function() {
 	var $allCheckbox = $('input[type="checkbox"]'), //全局的全部checkbox
 		$wholeChexbox = $('.whole_check'),
 		$sonCheckBox = $('.son_check'); //每个商品的checkbox
-	
-	
-	$('header span.edit').on('click',function(){
+
+	$('header span.edit').on('click', function() {
 		if($(this).html() == '编辑') {
 			$(this).html('完成')
-			$('.chk').css('display','block')
-			$('footer').css('visibility','visible')
+			$('.chk').css('display', 'block')
+			$('footer').css('visibility', 'visible')
 		} else {
 			$(this).html('编辑')
-			$('.chk').css('display','none')
-			$('footer').css('visibility','hidden')
+			$('.chk').css('display', 'none')
+			$('footer').css('visibility', 'hidden')
 		}
 	})
-	
+
 	//所有选择
 	$allCheckbox.click(function() {
 		totalMoney()
@@ -27,7 +26,7 @@ $(document).ready(function() {
 			$(this).next('label').removeClass('mark')
 		}
 	})
-	
+
 	//全选和单选
 	$wholeChexbox.click(function() {
 		if($(this).is(':checked')) {

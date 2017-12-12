@@ -85,3 +85,71 @@ footer {
     border-radius: 4px;
     height: 44px;
 }
+
+div.name_edit {
+	position: fixed;
+	width: 100%;
+	max-width: 640px;
+	height: 100%;
+	top: 0;
+	right: -100%;
+	background-color: #EEEEEE;
+	transition: 0.4s;
+}
+
+div.name_edit.active {
+	position: absolute;
+	width: 100%;
+	max-width: 640px;
+	height: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	backgroud-color: #EEEEEE;
+	transition: 0.4s;
+}
+
+div.name_edit div.top {
+	width: 100%;
+	max-width: 640px;
+	height: 44px;
+	font-size: 16px;
+	line-height: 44px;
+	text-align: center;
+	background: url(../../img/logo.png)no-repeat 40px center;
+	background-size: 50px;
+	background-color: #FFFFFF;
+	z-index: 999;
+	padding-right: 38px;
+}
+
+div.name_edit div.top i.icon-back {
+	color: #707070;
+	text-align: left;
+	padding-left: 22px;
+}
+
+div.name_edit div.ipt_name {
+	margin-top: 10px;
+}
+
+div.name_edit div.ipt_name input{
+	width: 100%;
+	height: 50px;
+	border: none;
+	padding: 0 20px;
+}
+
+div.name_edit div.save {
+	margin: 20px 20px 0;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 44px;
+    background: #C60A1E;
+    border: 1px solid #cacaca;
+    border-radius: 4px;
+    height: 44px;
+}
